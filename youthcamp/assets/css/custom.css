@@ -1,0 +1,14 @@
+.custom {
+	width: 800px;
+	margin: 0px auto;
+}
+
+.cust-add-on
+ {
+ 	margin-left : -4px !important;
+ 	margin-top : -8px !important;
+ }
+
+ .footer {
+ 	text-align : center;
+ }
