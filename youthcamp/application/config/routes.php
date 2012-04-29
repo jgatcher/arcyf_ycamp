@@ -40,9 +40,10 @@
 
 //$route['default_controller'] = "welcome";
 $route['404_override'] = '';
+$route['registeration/register_camper'] = 'registeration/register_camper';
+$route['registeration'] = 'registeration/view';
+$route['default_controller'] = 'home/view';
+$route['home'] = 'home/view/';
 
-$route['default_controller'] = 'registration/view';
-$route['(:any)'] = 'registration/view/$1';
-$route['registration/register'] = 'registration/register';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

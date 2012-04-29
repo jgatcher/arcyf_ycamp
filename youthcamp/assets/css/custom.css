@@ -12,3 +12,19 @@
  .footer {
  	text-align : center;
  }
+
+.logout{
+
+}
+
+#login_div{
+	display: none;
+}
+
+#signup_form, #login_form {
+	margin-top : 20px;
+}
+
+#signup_div a, #login_div a {
+	
+} 

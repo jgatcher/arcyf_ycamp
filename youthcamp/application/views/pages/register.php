@@ -1,15 +1,23 @@
-<div class='custom'>
+
+<?php $is_logged_in = $this->session->userdata("is_user_logged_in"); 
+	if($is_logged_in){
+		//echo $this->session->userdata("has_registered");
+		?>
+		<div class='custom'>
+			<div class="logout">
+				<a href="<?php echo site_url('home/logout') ?>">Logout</a>
+			</div> 
 	<h2>Register</h2>
 	<?php 
-		$attributes = array('class' => 'well custom', 'id'=>'registerForm' );
-		echo form_open('registration/register_camper', $attributes);
- 	?>
-	
 		
+		$attributes = array('class' => 'well custom', 'id'=>'registerForm' );
+		echo form_open('registeration/register_camper', $attributes);
+ 	?>
 		<div class="row">
 			
 			<div class="span2"></div>
 	  		<div class="span4">
+
 	  			<label>First Name  </label>
 				<p>
 					<input type='text' name='firstName' id='firstName'>
@@ -119,24 +127,39 @@
 
 			$("#registerForm").submit(function (){
 
-				var data = $(this).serializeArray();
-				var url  = $(this).attr("action");
-				$.ajax({
-					data : data,
-					type : 'post',
-					dataType : 'json',
-					url : url,
-					success : function (res){
-						console.log(res);
-						if(res.success){
-							console.log(" we are here");
-							$("#success span").html(res.message);
-							$("#success").show()
-						}
-					}
-				});
-				return false;
+
+				//todo: validation
+
+				
+				// var data = $(this).serializeArray();
+				// var url  = $(this).attr("action");
+				// $.ajax({
+				// 	data : data,
+				// 	type : 'post',
+				// 	dataType : 'json',
+				// 	url : url,
+				// 	success : function (res){
+				// 		console.log(res);
+				// 		if(res.success){
+				// 			console.log(" we are here");
+				// 			$("#success span").html(res.message);
+				// 			$("#success").show()
+				// 		}
+				// 	}
+				// });
+				
 			});
 		})();
 
 	</script>
+		<?php
+	}else {
+		?>
+		<div class="row custom">
+			<div class="span6">
+				You need to login to be able to view this page. 
+			</div>
+			
+		</div>
+	<?php }
+?>
