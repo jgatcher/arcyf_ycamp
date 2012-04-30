@@ -1,11 +1,10 @@
 <?php 
 	class Home extends CI_Controller {
 
-		public function view(){
+		public function view($page = "home"){
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 			
-			$page = "home";
 			$data["title"] = $page;
 			$data["main_content"]  = 'pages/'.$page;
 			$this->load->view('templates/template',$data);
@@ -26,7 +25,6 @@
 
 			
 			if(!empty($val)){
-
 				$has_registered = empty($val[0]["has_registered"]) ? 0 : $val[0]["has_registered"];  
 				$data = array(
 					"email_log" =>$val[0]["email"],
@@ -37,13 +35,21 @@
 				
 				
 				$this->session->set_userdata($data);
-				redirect('site');	
+				if($has_registered){
+					redirect('site/');
+				}else {
+					redirect('registeration/');	
+				}
+				
 			}else {
 				$this->view();
 			}
 			
 		}		
 		
+		public function view_login(){
+			$this->view("login");
+		}
 
 
 		public function signup(){
@@ -63,18 +69,14 @@
 				$data["has_registered"] = false;
 				try {
 					$id = $this->mongo_db->insert('campers', $data );
-					$data = array(
-						"email_log" => $data["email"],
-						"id" => $id,
-						"is_user_logged_in" => true
-					);
-
-					$this->session->set_userdata($data);
-					redirect('registeration/');
+					$str = "Welcome! Please login to start the registration process.";
+					$this->session->set_flashdata('item', $str);
+					redirect('home/view_login');
 				}catch (MongoConnectionException $e) {
-					
+					//todo : add error messages
+					$this->view();
 				}catch (MongoException  $e) {
-					
+					$this->view();
 				}
 			}
 			else {

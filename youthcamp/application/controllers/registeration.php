@@ -34,16 +34,6 @@
 			}
 
 			redirect('site/');
-
-			// $response = array(
-			// 	"data" => $data ,
-			// 	"message" => "Thanks for registering for youth camp 2012. Hope to see there. Till then keep your fire burning",
-			// 	"success" => true
-			// );
-
-			// //header("Content-Type: application/json");
-			// echo json_encode($response);
-			// exit;
 		}
 	}
  ?>

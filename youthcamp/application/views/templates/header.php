@@ -63,8 +63,8 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="<?php  ?> "><a href="<?echo base_url(); ?>">Home</a></li>
-              <li class="<?php  ?> "><a  href="<?echo base_url(); ?>about">About Youth Camp</a></li>
-              <li class="<?php  ?> "><a href="<?echo base_url(); ?>contact">Contact</a></li>
+              <li class="<?php  ?> "><a  href="<?echo base_url(); ?>index.php/about">About Youth Camp</a></li>
+              <li class="<?php  ?> "><a href="<?echo base_url(); ?>index.php/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
