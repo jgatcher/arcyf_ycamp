@@ -69,7 +69,7 @@
 				$data["has_registered"] = false;
 				try {
 					$id = $this->mongo_db->insert('campers', $data );
-					$str = "Welcome! Please login to start the registration process.";
+					$str = "Successfully signed Up! Please login to start the registration process.";
 					$this->session->set_flashdata('item', $str);
 					redirect('home/view_login');
 				}catch (MongoConnectionException $e) {

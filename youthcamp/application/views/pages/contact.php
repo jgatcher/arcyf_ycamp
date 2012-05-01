@@ -1,20 +1,25 @@
-<div>
-	<table>
-		<th>
-			<tr>
-				<td>Contact Person </td>
-				<td>Phone Number</td>
-			</tr>
-		</th>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
+<div class='custom'>
+	<div class='row'>
+		<div class="span6">
+			<table class='table table-bordered table-striped'>
+		    <thead>
+			    <tr>
+				    <th>Contact Person </th>
+				    <th>Phone Number </th>
+			    </tr>
+		    </thead>
+		    <tbody>
+			   <tr>
+					<td>Andrew Amegatcher</td>
+					<td>0267666975</td>
+				</tr>
+				<tr>
+					<td>Anthony Dzixose-Davor</td>
+					<td>0244226692</td>
+				</tr>
+		    </tbody>
+	    </table>
+		</div>
+	    
+	</div>
 </div>
