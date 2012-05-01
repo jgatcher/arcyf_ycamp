@@ -62,9 +62,9 @@
           <a class="brand" href="<?php echo base_url(); ?>">YOUTH CAMP 2012</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="<?php  ?> "><a href="<?php echo base_url(); ?>">Home</a></li>
-              <li class="<?php  ?> "><a  href="<?php echo base_url(); ?>index.php/about">About Youth Camp</a></li>
-              <li class="<?php  ?> "><a href="<?php echo base_url(); ?>index.php/contact">Contact</a></li>
+              <li class=""><a href="<?php echo base_url(); ?>">Home</a></li>
+              <li class=""><a  href="<?php echo base_url(); ?>index.php/about">About Youth Camp</a></li>
+              <li class=""><a href="<?php echo base_url(); ?>index.php/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

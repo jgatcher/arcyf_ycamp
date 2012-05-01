@@ -1,5 +1,5 @@
 .custom {
-	width: 800px;
+	width: 800px !important;
 	margin: 0px auto;
 }
 
@@ -28,3 +28,7 @@
 #signup_div a, #login_div a {
 	
 } 
+
+.container {
+	width : 900px !important;
+}
