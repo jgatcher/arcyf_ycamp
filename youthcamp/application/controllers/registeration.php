@@ -30,10 +30,12 @@
 				$occupation["school_location"] = $data["school_location"];
 				$occupation["educationalLevel"] = $data["educationalLevel"];
 
-				unset($data["school"]);
-				unset($data["school_location"]);
-				unset($data["educationalLevel"]);
+				
 			}
+
+			unset($data["school"]);
+			unset($data["school_location"]);
+			unset($data["educationalLevel"]);
 
 			$data["occupation"] = $occupation;
 

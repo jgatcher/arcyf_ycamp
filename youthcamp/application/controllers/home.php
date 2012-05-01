@@ -42,7 +42,7 @@
 				}
 				
 			}else {
-				$this->view();
+				$this->view_login();
 			}
 			
 		}		
@@ -89,7 +89,8 @@
 
 		public function logout () {
 			$this->session->sess_destroy(); 
-			$this->view();
+			//$this->view();
+			redirect('');
 		}
 	}
 ?>
