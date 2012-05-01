@@ -87,7 +87,7 @@
 	  			<div class="control-group">
 					<label>Phone Number</label>
 					<p>
-						<input type='text' name='phone_number' id='phone_number'>
+						<input type='text' name='phoneNumber' id='phoneNumber'>
 					</p>
 				</div>
 	  		</div>
@@ -107,14 +107,18 @@
 		            </div>
 				</p>
 				<div id="student_details">
-					<label>School  </label>
-					<p>
-						<input type='text' name='school' id='school'>
-					</p>
-					<label>Location of School  </label>
-					<p>
-						<input type='text' name='school_location' id='school_location'>
-					</p>
+					<div class="control-group">
+						<label>School  </label>
+						<p>
+							<input type='text' name='school' id='school'>
+						</p>
+					</div>
+					<div class="control-group">
+						<label>Location of School  </label>
+						<p>
+							<input type='text' name='school_location' id='school_location'>
+						</p>
+					</div>
 
 					<label>Educational Level </label>
 					<p>
@@ -180,16 +184,17 @@
 			$("#dp3").datepicker();
 
 			var studentDetails = $("#student_details");
-			var studentVal;
 			var errorBox = $("#error_box");
 
 			var currentOccupation = $("input[name='occupation']:checked").val();
 			check_occupation(currentOccupation);
 
 			$("input[name='occupation']").change(function(){
-				check_occupation($(this).val());
+				currentOccupation = $(this).val();
+				check_occupation(currentOccupation);
 			})
 
+			
 
 			function check_occupation(studentVal) {
 				studentVal = $.trim(studentVal);
@@ -201,6 +206,7 @@
 					studentDetails.show();
 				}
 			}
+
 			$("#registerForm").submit(function (){
 				clear();
 
@@ -221,9 +227,22 @@
 				}
 				
 				var filter = /^\d{10}$/;
-				if(!validate_fon("phone_number",filter)){
+				if(!validate_fon("phoneNumber",filter)){
 					ErrorMsg("Please provide a valid 10 digit phone number in this format (xxxxxxxxxx)");
 					return false;
+				}
+
+				if($.trim(currentOccupation)=="student"){
+					//check school and location
+					if(!validate("school")){
+						ErrorMsg("Please provide a name for your school");
+						return false;
+					}
+
+					if(!validate("school_location")){
+						ErrorMsg("Please provide location for your school");
+						return false;
+					}
 				}
 
 				if(!validate("emergency_contact")){
