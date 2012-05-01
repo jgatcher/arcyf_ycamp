@@ -183,8 +183,16 @@
 			var studentVal;
 			var errorBox = $("#error_box");
 
+			var currentOccupation = $("input[name='occupation']:checked").val();
+			check_occupation(currentOccupation);
+
 			$("input[name='occupation']").change(function(){
-				var studentVal = $.trim ($(this).val());
+				check_occupation($(this).val());
+			})
+
+
+			function check_occupation(studentVal) {
+				studentVal = $.trim(studentVal);
 				if(studentVal=="worker"){
 					studentDetails.hide();
 				}
@@ -192,9 +200,7 @@
 				if(studentVal== "student"){
 					studentDetails.show();
 				}
-			})
-
-
+			}
 			$("#registerForm").submit(function (){
 				clear();
 

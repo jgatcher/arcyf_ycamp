@@ -21,7 +21,32 @@
 			$this->load->library('mongo_db');
 			$id = $this->session->userdata("id") ;
 			$email = $this->session->userdata("email_log");
-		
+			
+			$occupation = array();
+			$type = $occupation["type"] = $data["occupation"];
+			
+			if($type=="student"){
+				$occupation["school"] = $data["school"];
+				$occupation["school_location"] = $data["school_location"];
+				$occupation["educationalLevel"] = $data["educationalLevel"];
+
+				unset($data["school"]);
+				unset($data["school_location"]);
+				unset($data["educationalLevel"]);
+			}
+
+			$data["occupation"] = $occupation;
+
+			$emergency  = array(
+				"name" => $data["emergency_contact"],
+				"number" => $data["emergency_contact_num"]
+			);
+
+			unset($data["emergency_contact"]);
+			unset($data["emergency_contact_num"]);
+			$data["emergency"] = $emergency;
+			
+
 			try {
 				$data["has_registered"] = true;
 				$this->mongo_db->where(
