@@ -7,18 +7,20 @@
 			<div class="logout">
 				<a href="<?php echo site_url('home/logout') ?>">Logout</a>
 			</div> 
-	<h2>Register</h2>
+	
 	<div class="alert alert-error hide" id='error_box'>
 		<p></p>
 	</div>
 	<?php 
 		
-		$attributes = array('class' => 'well custom', 'id'=>'registerForm' );
+		$attributes = array('class' => 'well span8', 'id'=>'registerForm' );
 		echo form_open('registeration/register_camper', $attributes);
  	?>
 		<div class="row">
+	  		<div class="span8"><h2>Register</h2><br /> </div>
+
 	  		<div class="span4">
-	  			
+
 	  			<div class="control-group">
 	  				<label>First Name  </label>
 					<p>
@@ -192,7 +194,7 @@
 			$("input[name='occupation']").change(function(){
 				currentOccupation = $(this).val();
 				check_occupation(currentOccupation);
-			})
+			});
 
 			
 

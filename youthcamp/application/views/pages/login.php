@@ -1,4 +1,4 @@
-<div class='custom well'>
+<div class='custom'>
 	<?php  
 			$attributes_login = array('class' => 'custom', 'id'=>'login_form' );
 		?>
@@ -6,7 +6,7 @@
 
 	<div class="row" >
 
-			<div class='span4'>
+			<div class='span4 well'>
 				<?php 
 					$msg = $this->session->flashdata('item');
 					if(!empty($msg)){

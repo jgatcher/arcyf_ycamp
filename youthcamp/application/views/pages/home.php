@@ -1,18 +1,18 @@
 
-<div class='custom well'>
+<div class='custom'>
 		<?php  
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
 		
 		<div class="row" >
-			<div class='span4'>
+			<div class='span4 well'>
 			<div id='signup_div'>
 				<h2>Sign Up </h2>
 				<?php echo form_open('home/signup', $attributes_signup); ?>
 
 					<label>Email:</label>
 					<p>
-						<input type='text' name='email' id='email'>
+						<input type='text' name='email' id='email' class=''>
 					</p>
 					
 					<label>Password:</label>
