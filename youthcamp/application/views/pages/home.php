@@ -1,11 +1,31 @@
 
 <div class='custom'>
+	<div class='instructions'>
+		<h2>Register for Youth Camp in just 3 simple steps.</h2>
+		<h3>Step 1. Sign Up</h3>
+		<ol>
+		  <li class="step1 selected">1</li>
+		  <li class="step2">2</li>
+		  <li class="step3">3</li>
+		</ol>
+	</div>
 		<?php  
+
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
 		
 		<div class="row" >
 			<div class='span4 well'>
+				<?php 
+					$error = $this->session->flashdata('item');
+					if(!empty($msg)){
+						?>
+						<div class="alert alert-error">
+							<?php echo  $error; ?>
+						</div>
+				<?php	}
+				 ?>
+
 			<div id='signup_div'>
 				<h2>Sign Up </h2>
 				<?php echo form_open('home/signup', $attributes_signup); ?>

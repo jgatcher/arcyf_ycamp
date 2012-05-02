@@ -1,6 +1,6 @@
 .custom {
-	/*width: 800px !important;
-	margin: 0px auto;*/
+	width : 900px;
+	margin: 0px auto;
 }
 
 .cust-add-on
@@ -31,4 +31,57 @@
 
 .container {
 	/*width : 900px !important;*/
+}
+
+.instructions {
+	
+	margin :0px;
+	padding: 0px;
+
+}
+
+.instructions ol {
+	height : 13px;
+	margin-bottom : 40px;
+	margin-left: 0px;
+	position : relative;
+	border-bottom: 1px solid #EBEBEB;
+}
+
+.instructions ol li {
+	background: #ffffff;
+	display: inline-block;
+	width : 25px;
+	height : 25px;
+	border: 1px solid #F5F5F5;
+	font-weight : bold;
+	text-align : center;
+	border-radius : 1em;
+	line-height : 25px;
+	color: #777777;
+	position: absolute;
+}
+
+.instructions .step2  {
+	left : 50%;
+}
+
+.instructions .step3 {
+	right : 0px;
+}
+
+.instructions ol li.selected { 
+	background: #DD4B39;
+	border: 0px none currentColor;
+	color: #FFFFFF;
+}
+
+.instructions h2, h3 {
+	color : #DD4B39;
+	margin-bottom : 20px;
+	font-weight : normal;
+}
+
+.instructions  h3 { 
+	color : #0088CC;
 }

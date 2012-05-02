@@ -1,4 +1,14 @@
 <div class='custom'>
+
+	<div class='instructions'>
+		<h2>Register for Youth Camp in just 3 simple steps.</h2>
+		<h3>Step 2. Login with the details you just created.</h3>
+		<ol>
+		  <li class="step1 ">1</li>
+		  <li class="step2 selected">2</li>
+		  <li class="step3">3</li>
+		</ol>
+	</div>
 	<?php  
 			$attributes_login = array('class' => 'custom', 'id'=>'login_form' );
 		?>

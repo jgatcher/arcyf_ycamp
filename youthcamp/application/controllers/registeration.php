@@ -49,15 +49,16 @@
 			$data["emergency"] = $emergency;
 			
 
-			try {
+			try{
 				$data["has_registered"] = true;
+				$data["date_registered"]  = date("Y-m-d h:i:s");
 				$this->mongo_db->where(
 					array("email"=>$email, "_id"=>new MongoId($id))
 					)->update('campers', $data );
 			} catch (MongoConnectionException $e) {
-				print_r($e);
+				//print_r($e);
 			} catch (MongoException  $e) {
-				print_r($e);
+				//print_r($e);
 			}
 
 			redirect('site/');

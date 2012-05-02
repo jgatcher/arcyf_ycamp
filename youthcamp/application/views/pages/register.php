@@ -8,9 +8,19 @@
 				<a href="<?php echo site_url('home/logout') ?>">Logout</a>
 			</div> 
 	
-	<div class="alert alert-error hide" id='error_box'>
-		<p></p>
-	</div>
+			<div class='instructions'>
+				<h2>Register for Youth Camp in just 3 simple steps.</h2>
+				<h3>Step 3. Fill out the registering form</h3>
+				<ol>
+				  <li class="step1 ">1</li>
+				  <li class="step2">2</li>
+				  <li class="step3 selected">3</li>
+				</ol>
+			</div>
+
+		<div class="alert alert-error hide" id='error_box'>
+			<p></p>
+		</div>
 	<?php 
 		
 		$attributes = array('class' => 'well span8', 'id'=>'registerForm' );

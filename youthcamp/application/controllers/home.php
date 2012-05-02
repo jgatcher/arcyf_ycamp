@@ -58,15 +58,25 @@
 			$data = array();
 			//todo make sure that the email and password do not already exist
 			$data["email"] = $this->input->post("email");
-			$data["password"] = md5($this->input->post("password"));
+			$data["password"] =$this->input->post("password");
 			
+			if(empty($data["emaill"] || empty($data["password"]))){
+				$reponse = "Please supply both email and password.";
+				$this->session->set_flashdata('item', $reponse);
+				$this->view();
+			}
+
+			$data["password"] =  md5($data["password"]);
+
+			//check to see if a camper with the same credentials already exist
 			$val = $this->mongo_db->where(array(
 				"email" => $data["email"],
 				"password" => $data["password"]
 				))->get("campers");
 			
-			if(empty($val) ){ // no camper found
+			if(empty($val)){ // no camper found
 				$data["has_registered"] = false;
+				$data["date_signed_up"]  = date("Y-m-d h:i:s");
 				try {
 					$id = $this->mongo_db->insert('campers', $data );
 					$str = "Successfully signed Up! Please login to start the registration process.";
@@ -81,8 +91,7 @@
 			}
 			else {
 				$reponse = "There is already a  camper with the same email and password. If you the one, kindly proceed to login.";
-				$this->session->set_flashdata('error', $reponse);
-				$this->session->keep_flashdata('error');
+				$this->session->set_flashdata('item', $reponse);
 				$this->view();
 			}
 		}
