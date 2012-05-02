@@ -60,39 +60,43 @@
 			$data["email"] = $this->input->post("email");
 			$data["password"] =$this->input->post("password");
 			
-			if(empty($data["emaill"] || empty($data["password"]))){
+			$this->session->set_userdata(array("is_registering" => true));
+
+			if(empty($data["email"]) || empty($data["password"])) {
 				$reponse = "Please supply both email and password.";
-				$this->session->set_flashdata('item', $reponse);
-				$this->view();
+				$this->session->set_flashdata('err', $reponse);
+				redirect('home/view');
 			}
+			else //inputs are clean
+			{
+				$data["password"] =  md5($data["password"]);
 
-			$data["password"] =  md5($data["password"]);
-
-			//check to see if a camper with the same credentials already exist
-			$val = $this->mongo_db->where(array(
-				"email" => $data["email"],
-				"password" => $data["password"]
-				))->get("campers");
-			
-			if(empty($val)){ // no camper found
-				$data["has_registered"] = false;
-				$data["date_signed_up"]  = date("Y-m-d h:i:s");
-				try {
-					$id = $this->mongo_db->insert('campers', $data );
-					$str = "Successfully signed Up! Please login to start the registration process.";
-					$this->session->set_flashdata('item', $str);
-					redirect('home/view_login');
-				}catch (MongoConnectionException $e) {
-					//todo : add error messages
-					$this->view();
-				}catch (MongoException  $e) {
-					$this->view();
+				//check to see if a camper with the same credentials already exist
+				$val = $this->mongo_db->where(array(
+					"email" => $data["email"],
+					"password" => $data["password"]
+					))->get("campers");
+				
+				if(empty($val)){ // no camper found
+					$data["has_registered"] = false;
+					$data["date_signed_up"]  = date("Y-m-d h:i:s");
+					try {
+						$id = $this->mongo_db->insert('campers', $data );
+						$str = "Successfully signed Up! <b>Please login to start the registration process </b> .";
+						$this->session->set_flashdata('item', $str);
+						redirect('home/view_login');
+					}catch (MongoConnectionException $e) {
+						//todo : add error messages
+						redirect('home/view');
+					}catch (MongoException  $e) {
+						redirect('home/view');
+					}
 				}
-			}
-			else {
-				$reponse = "There is already a  camper with the same email and password. If you the one, kindly proceed to login.";
-				$this->session->set_flashdata('item', $reponse);
-				$this->view();
+				else {
+					$reponse = "There is already a  camper with the same email and password. If you the one, kindly proceed to login.";
+					$this->session->set_flashdata('err', $reponse);
+					redirect('home/view');
+				}
 			}
 		}
 

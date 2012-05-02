@@ -17,8 +17,8 @@
 		<div class="row" >
 			<div class='span4 well'>
 				<?php 
-					$error = $this->session->flashdata('item');
-					if(!empty($msg)){
+					$error = $this->session->flashdata('err');
+					if(!empty($error)){
 						?>
 						<div class="alert alert-error">
 							<?php echo  $error; ?>
