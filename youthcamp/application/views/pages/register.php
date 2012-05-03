@@ -52,10 +52,42 @@
 	  			<div class="control-group">
 	  				<label>Date of Birth</label>
 					<p>
-						<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-							<input class="span2" size="16" type="text" value="12-02-2012"  name='dateOfbirth' readonly="" />
-							<span class="add-on cust-add-on"><i class="icon-th"></i></span>
-						</div>
+						
+							<select class='span2'name='month' id='month' >
+								<option value=''>Month</option>
+								<option value='01'>January</option>
+								<option value='02'>February</option>
+								<option value='03'>March</option>
+								<option value='04'>April</option>
+								<option value='05'>May</option>
+								<option value='06'>June</option>
+								<option value='07'>July</option>
+								<option value='08'>August</option>
+								<option value='09'>September</option>
+								<option value='10'>October</option>
+								<option value='11'>November</option>
+								<option value='12'>December</option>
+							</select>
+						
+							<select class='span1' name='day'  id='day'>
+								<option value=''>Day</option>
+								<?php
+									for ($i= 1; $i < 32 ; $i++) { 
+										echo "<option value='$i' > $i  </option>";
+									}
+								 ?>
+
+							</select>
+						
+							<select class='span1' name = 'year'  placeholder="year" id='year'>
+							<option value=''>Year</option>
+								<?php 
+									$year =  date('Y'); 
+									for ($i = 1960; $i  <= $year  ; $i++) { 
+										echo "<option value='$i' > $i  </option>";
+									}
+								?>
+							</select>
 					</p>
 	  			</div>
 	  			<label>Gender</label>
@@ -232,6 +264,22 @@
 					ErrorMsg("Please provide a Last Name");
 					return false;
 				}
+
+				if(!validate('month')){
+					ErrorMsg("Please select a Month for the date of Birth");
+					return false;
+				}
+
+				if(!validate('day')){
+					ErrorMsg("Please select a Day for the date of Birth");
+					return false;
+				}
+
+				if(!validate('year')){
+					ErrorMsg("Please select a Year for the date of Birth");
+					return false;
+				}
+
 
 				if(!validate("residence")){
 					ErrorMsg("Please provide an Area of residence");

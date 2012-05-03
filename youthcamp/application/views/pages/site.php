@@ -1,11 +1,9 @@
 <?php 
 	$has_registered = $this->session->userdata("has_registered");	
 ?>
-	<div class="logout">
-		<a href="<?php echo site_url('home/logout') ?>">Logout</a>
-	</div> 
-
+	
 	<?php if ($has_registered == 1) {
+		$this->session->sess_destroy(); 
 		?>
 		<div class="alert alert-success">
 			<p>
@@ -15,6 +13,9 @@
 	<?php }
 	else{
 	?>
+	<div class="logout">
+		<a href="<?php echo site_url('home/logout') ?>">Logout</a>
+	</div> 
 		<div class="alert alert-error">
 			<p>
 				You have not filled your registration form. This implies that you have not been registered. 
