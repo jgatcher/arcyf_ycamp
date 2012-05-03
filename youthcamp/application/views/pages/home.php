@@ -46,8 +46,9 @@
 					</p>
 					
 					<input type='submit' value='Sign Up' class='btn btn-primary' id='signUpBtn'>
+					<a class='btn btn-success form_links' id='click_login' href="<?php echo base_url() ?>index.php/home/view_login "> Click here if already signed up</a>
 				<?php echo form_close(); ?>
-				<a id='click_login' href="<?php echo base_url() ?>index.php/home/view_login "> Click here if already signed up</a> 
+				 
 			</div>
 		</div>
 			<div class="span4">

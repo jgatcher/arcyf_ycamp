@@ -48,10 +48,10 @@
 						<input type='password' name='password_log' id='password_log'>
 					</p>
 					<input type='submit' value='Login' class='btn btn-primary' id='loginBtn'>
-					<?php echo form_close(); ?>
-					<a id='click_signup' href="<?php echo base_url() ?>"> Click here to first sign up
-						before continuing.
+					<a  class='btn btn-success form_links' id='click_signup' href="<?php echo base_url() ?>"> Click here to first sign up.
 					</a> 
+					<?php echo form_close(); ?>
+					
 				</div>
 			</div>
 			<div class="span4">
