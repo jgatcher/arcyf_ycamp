@@ -29,8 +29,6 @@
 				$occupation["school"] = $data["school"];
 				$occupation["school_location"] = $data["school_location"];
 				$occupation["educationalLevel"] = $data["educationalLevel"];
-
-				
 			}
 
 			unset($data["school"]);
@@ -38,6 +36,23 @@
 			unset($data["educationalLevel"]);
 
 			$data["occupation"] = $occupation;
+			$_ch = trim($data["church"]);
+			
+			if($_ch== "other" ){
+				$church = array(
+					"type" => "other",
+					"name" => $data["otherChurch"]
+				);
+			}
+			else {
+				$church = array(
+					"type" => "default",
+					"name" => $_ch
+				);
+			}
+
+			
+			$data["church"] = $church;
 
 			$emergency  = array(
 				"name" => $data["emergency_contact"],

@@ -113,12 +113,17 @@
 
 	  			<label>Church </label>
 				<p>
-					<select name='church'>
+					<select name='church' id='church'>
 						<option value='ridge'>Ridge</option>
 						<option value='manet'>Manet</option>
 						<option value='tudu'>Tudu</option>
 						<option value='other'>Other</option>
 					</select>
+					<div class="control-group">
+
+						<input type='text' name='=otherChurch' id='otherChurch' class='hide'>
+					
+					</div>
 				</p>
 
 				<label>Country of Residence: </label>
@@ -228,6 +233,7 @@
 
 			var studentDetails = $("#student_details");
 			var errorBox = $("#error_box");
+			var otherChurch = $("#otherChurch");
 
 			var currentOccupation = $("input[name='occupation']:checked").val();
 			check_occupation(currentOccupation);
@@ -237,6 +243,16 @@
 				check_occupation(currentOccupation);
 			});
 
+			var currentChurch;
+			$("#church").change(function(){
+				currentChurch = $.trim($(this).val());
+				if(currentChurch=="other"){
+					otherChurch.show();
+				}else {
+					otherChurch.hide();
+				}
+				//alert(currentChurch);
+			});
 			
 
 			function check_occupation(studentVal) {
@@ -283,6 +299,16 @@
 				if(!validate("residence")){
 					ErrorMsg("Please provide an Area of residence");
 					return false;
+				}
+
+				//validate church here 
+				var church = $("#church").val();
+				if($.trim(church)=="other"){
+					//var otherChurch = $("#otherChurch").val();
+					if(!validate("otherChurch")){
+						ErrorMsg("Please provide a name for your church");
+						return false;
+					}
 				}
 				
 				var filter = /^\d{10}$/;
