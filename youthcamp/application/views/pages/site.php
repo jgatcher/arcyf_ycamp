@@ -7,7 +7,7 @@
 		?>
 		<div class="alert alert-success">
 			<p>
-				Thanks for registering for youth camp 2012. Hope to see you there. Till then, keep your fire burning.
+				You can now make payments<br/> Thanks for registering for Youth Camp 2012. Can't wait to see you there. Till then, keep your fire burning.
 			</p>
 		</div>
 	<?php }
