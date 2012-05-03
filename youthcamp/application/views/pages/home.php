@@ -32,17 +32,17 @@
 
 					<label>Email:</label>
 					<p>
-						<input type='text' name='email' id='email' class=''>
+						<input type='text' name='email' id='email' class='span3'>
 					</p>
 					
 					<label>Password:</label>
 					<p>
-						<input type='password' name='password' id='password'>
+						<input type='password' name='password' id='password' class='span3'>
 					</p>
 					
 					<label>Confirm Password:</label>
 					<p>
-						<input type='password' name='confpassword' id='confpassword'>
+						<input type='password' name='confpassword' id='confpassword' class='span3'>
 					</p>
 					
 					<input type='submit' value='Sign Up' class='btn btn-primary' id='signUpBtn'>

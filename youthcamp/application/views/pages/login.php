@@ -40,12 +40,12 @@
 					<?php echo form_open('home/login', $attributes_login); ?>
 					<label>Email:</label>
 					<p>
-						<input type='text' name='email_log' id='email_log'>
+						<input type='text' name='email_log' id='email_log' class='span3'>
 					</p>
 					
 					<label>Password:</label>
 					<p>
-						<input type='password' name='password_log' id='password_log'>
+						<input type='password' name='password_log' id='password_log' class='span3'>
 					</p>
 					<input type='submit' value='Login' class='btn btn-primary' id='loginBtn'>
 					<a  class='btn btn-success form_links' id='click_signup' href="<?php echo base_url() ?>"> Click here to first sign up.
