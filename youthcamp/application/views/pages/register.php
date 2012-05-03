@@ -121,7 +121,7 @@
 					</select>
 					<div class="control-group">
 
-						<input type='text' name='=otherChurch' id='otherChurch' class='hide'>
+						<input type='text' name='otherChurch' id='otherChurch' class='hide'>
 					
 					</div>
 				</p>

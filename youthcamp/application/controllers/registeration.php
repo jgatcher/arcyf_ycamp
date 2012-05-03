@@ -36,19 +36,17 @@
 			unset($data["educationalLevel"]);
 
 			$data["occupation"] = $occupation;
-			$_ch = trim($data["church"]);
+			$ch = trim($data["church"]);
 			
-			if($_ch== "other" ){
-				$church = array(
-					"type" => "other",
-					"name" => $data["otherChurch"]
-				);
+			
+			$church = array();
+			if($ch== "other" ){
+				$church["type"] = "other";
+				$church["name"] =  $data["otherChurch"];
 			}
 			else {
-				$church = array(
-					"type" => "default",
-					"name" => $_ch
-				);
+				$church["type"] = "default";
+				$church["name"] =  $ch;
 			}
 
 			
