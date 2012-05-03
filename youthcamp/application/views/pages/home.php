@@ -10,7 +10,7 @@
 		</ol>
 	</div>
 		<?php  
-
+			
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
 		
