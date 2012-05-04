@@ -158,7 +158,7 @@
 					<div class="control-group">
 						<label>School  </label>
 						<p>
-							<input type='text' name='school' id='school'>
+							<select name='school' id='school'></seleet>
 						</p>
 					</div>
 					<div class="control-group">
@@ -182,6 +182,7 @@
 				<p>
 					<select name='role'>
 						<option value='camper'>Camper</option>
+						<option value='committee'>Committee</option>
 						<option value='prayer warrior'>Prayer Warrior</option>
 						<option value='protocol'>Protocol</option>
 						<option value='participant'>Participant</option>
