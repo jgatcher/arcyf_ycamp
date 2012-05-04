@@ -54,8 +54,34 @@
 					
 				</div>
 			</div>
-			<div class="span4">
-				some image goes here
+			<div class="span5">
+			    <div id="myCarousel" class="carousel border">
+				    <!-- Carousel items -->
+				    <div class="carousel-inner">
+				    	<div class="active item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
+				    	</div>
+				    	<div class="item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/abokobi.jpg">
+				    	</div>
+				    	<div class="item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/hz.jpg">
+				    	</div>
+				    	<div class="item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/in_worship.jpg">
+				    	</div>
+				    	<div class="item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/in_worship_again.jpg">
+				    	</div>
+				    	<div class="item">
+				    		<img src="<?php echo base_url(); ?>/assets/images/last.png">
+				    	</div>
+
+				    </div>
+				    <!-- Carousel nav -->
+				    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				</div>
 			</div>
 		</div>
 	</div>
