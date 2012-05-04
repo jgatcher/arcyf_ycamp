@@ -46,13 +46,35 @@
 					</p>
 					
 					<input type='submit' value='Sign Up' class='btn btn-primary' id='signUpBtn'>
-					<a class='btn btn-success form_links' id='click_login' href="<?php echo base_url() ?>index.php/home/view_login "> Click here if already signed up</a>
+					<a class='btn btn-success form_links' id='click_login' href="<?php echo base_url() ?>index.php/home/view_login ">Already signed up</a>
 				<?php echo form_close(); ?>
 				 
 			</div>
 		</div>
-			<div class="span4">
-				some image goes here
+			<div class="span5">
+				
+					    <div id="myCarousel" class="carousel border">
+						    <!-- Carousel items -->
+						    <div class="carousel-inner">
+						    	<div class="active item">
+						    		<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
+						    	</div>
+						    	<div class="item">
+						    		<img src="<?php echo base_url(); ?>/assets/images/abokobi.jpg">
+						    	</div>
+						    	<div class="item">
+						    		<img src="<?php echo base_url(); ?>/assets/images/hz.jpg">
+						    	</div>
+						    	<div class="item">
+						    		<img src="<?php echo base_url(); ?>/assets/images/in_worship.jpg">
+						    	</div>
+
+						    </div>
+						    <!-- Carousel nav -->
+						    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+						</div>
+					
 			</div>
 			
 		</div>

@@ -1,5 +1,5 @@
 .custom {
-	width : 900px;
+	width : 920px;
 	margin: 0px auto;
 }
 
@@ -90,5 +90,9 @@
 }
 
 .form_links{
-	/*margin-left : 20px;*/
+	margin-left : 20px;
+}
+
+.border{
+	border: 1px solid #999;
 }
