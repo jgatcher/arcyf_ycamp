@@ -17,6 +17,14 @@
 					<td>Anthony Dzixose-Davor</td>
 					<td>0244226692</td>
 				</tr>
+				<tr>
+					<td>Babatunde Ampah</td>
+					<td>0264055555</td>
+				</tr>
+				<tr>
+					<td>Sipho Twum</td>
+					<td>0244233994</td>
+				</tr>
 		    </tbody>
 	    </table>
 		</div>
