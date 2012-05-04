@@ -159,8 +159,14 @@
 						<label>School  </label>
 						<p>
 							<select name='school' id='school'>
-							<option>Aburi Girls Senior High
-</option>
+<option>University of Ghana</option>
+<option>Pentecost University</option>
+<option>Ashesi University</option>
+<option>Methodist University</option>
+<option>Central University</option>
+<option>Cape Coast University</option>
+<option>Kwame Nkrimah University of Science and Technology</option>
+<option>Aburi Girls Senior High</option>
 <option>Accra Girls Senior High
 </option>
 <option>Achimota Senior High
