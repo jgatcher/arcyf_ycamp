@@ -158,7 +158,117 @@
 					<div class="control-group">
 						<label>School  </label>
 						<p>
-							<select name='school' id='school'></seleet>
+							<select name='school' id='school'>
+							<option>Aburi Girls Senior High
+</option>
+<option>Accra Girls Senior High
+</option>
+<option>Achimota Senior High
+</option>
+<option>Akosombo International
+</option>
+<option>All Saints' Anglican Model Basic School
+</option>
+<option>Alsyd Academy
+</option>
+<option>Archboshop Porter Girls Senior High
+</option>
+<option>Audausudai Junior High School
+</option>
+<option>Bask Academy
+</option>
+<option>Bishop Bowers School
+</option>
+<option>Bishop Girl's School
+</option>
+<option>Christ The King International School
+</option>
+<option>Corpus Christi Catholic Basic School
+</option>
+<option>East Airport International
+</option>
+<option>Emit Electronic Institute
+</option>
+<option>Faith Montessori
+</option>
+<option>Fountainhead Christian School
+</option>
+<option>Franklin & Marshall College
+</option>
+<option>Ghana Christian High
+</option>
+<option>Holy Child Senior High
+</option>
+<option>Ideal College
+</option>
+<option>Independence Avenue 1 Primary School
+</option>
+<option>Jack And Jill
+</option>
+<option>Krobo Girls Senior High
+</option>
+<option>Kumasi Girls' Senior High
+</option>
+<option>Lincoln High School
+</option>
+<option>Mary Mother Of Good Counsel
+</option>
+<option>Mawuli Senoir High
+</option>
+<option>Mfantsiman Girls Senior High
+</option>
+<option>Mfantsipim Senior High
+</option>
+<option>Mizpah International School
+</option>
+<option>Morning Glory Montessori
+</option>
+<option>Morning Star
+</option>
+<option>New Nation School
+</option>
+<option>North Ridge Lyceum
+</option>
+<option>Osu Presby Junior High School
+</option>
+<option>Pope John Senior High
+</option>
+<option>Presbyteriab Boys Senior High
+</option>
+<option>Presby Senior High [Osu]
+</option>
+<option>Queens International School
+</option>
+<option>Ridge Church School
+</option>
+<option>SOS-HGIC
+</option>
+<option>Soul Clinic Int. School
+</option>
+<option>St. Augustine's Senior High
+</option>
+<option>St. John's Grammar
+</option>
+<option>St. Mary's Senior High
+</option>
+<option>St. Roses Senior High
+</option>
+<option>St. Theresa's School
+</option>
+<option>St. Thomas Aquinas Senior High
+</option>
+<option>Tema International School
+</option>
+<option>University Of Ghana Basic School
+</option>
+<option>Wesley Girls' Senior High
+</option>
+<option>Winneba Senior High
+</option>
+<option>Word Of Faith Christian School
+</option>
+
+							</select>
 						</p>
 					</div>
 					<div class="control-group">
