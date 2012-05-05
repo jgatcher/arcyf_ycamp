@@ -273,8 +273,6 @@
 </option>
 <option>Word Of Faith Christian School
 </option>
-<option value='other'>Other</option>
-
 							</select>
 						</p>
 					</div>

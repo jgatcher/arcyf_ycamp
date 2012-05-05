@@ -57,10 +57,12 @@
 				"number" => $data["emergency_contact_num"]
 			);
 
+
 			unset($data["emergency_contact"]);
 			unset($data["emergency_contact_num"]);
 			$data["emergency"] = $emergency;
 			
+			$data["dateOfBirth"]  = $data["year"]."-". $data["month"] .'-' . $data["day"];
 
 			try{
 				$data["has_registered"] = true;

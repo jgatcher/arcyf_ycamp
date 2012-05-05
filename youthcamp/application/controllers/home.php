@@ -89,6 +89,7 @@
 				if(empty($val)){ // no camper found
 					$data["has_registered"] = false;
 					$data["date_signed_up"]  = date("Y-m-d h:i:s");
+					$data["dateOfBirth"]  = $data["year"]."-". $data["month"] .'-' . $data["day"];
 					try {
 						$id = $this->mongo_db->insert('campers', $data );
 						$str = "Successfully signed Up! <b>Please login to start the registration process </b> .";
