@@ -10,6 +10,11 @@
 			    </tr>
 		    </thead>
 		    <tbody>
+		    	<tr>
+					<td>Head</td>
+					<td>Babatunde Ampah</td>
+					<td>0264055555</td>
+				</tr>
 			   <tr>
 			   		<td>Registration</td>
 					<td>Andrew Amegatcher</td>
@@ -20,11 +25,7 @@
 					<td>Anthony Dzixose-Davor</td>
 					<td>0244226692</td>
 				</tr>
-				<tr>
-					<td></td>
-					<td>Babatunde Ampah</td>
-					<td>0264055555</td>
-				</tr>
+				
 				<tr>
 					<td>Transport</td>
 					<td>Sipho Twum</td>

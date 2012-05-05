@@ -273,10 +273,18 @@
 </option>
 <option>Word Of Faith Christian School
 </option>
+<option value='other'>Other</option>
 
 							</select>
 						</p>
 					</div>
+
+					<div class="control-group">
+						<p>
+							<input type='text' name='other_school' id='other_school' class='hide'>
+						</p>
+					</div>
+
 					<div class="control-group">
 						<label>Location of School  </label>
 						<p>
@@ -371,6 +379,21 @@
 				//alert(currentChurch);
 			});
 			
+			var otherSchool  = $("#other_school");
+			$("#school").change(function(){
+				var val  = $.trim($(this).val());
+				
+				if(val=="other")
+					otherSchool.show();
+				else {
+					otherSchool.hide();
+				}
+			});
+
+			
+			
+
+
 
 			function check_occupation(studentVal) {
 				studentVal = $.trim(studentVal);
@@ -439,6 +462,12 @@
 					if(!validate("school")){
 						ErrorMsg("Please provide a name for your school");
 						return false;
+					}
+
+					var school = $("#school").val();
+					
+					if($.trim(school)=="other"){
+						//check to make sure that other shcool text box has been filled.
 					}
 
 					if(!validate("school_location")){

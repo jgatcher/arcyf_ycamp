@@ -19,11 +19,6 @@
 				If you are between the ages of 16 and 30, seeking, searching and desiring more of 
 				God then Accra Ridge Church Youth Camp is the best place you would want to be every year.
 			</p>
-			   
- 
-
- 
-
 		</div>
 	</div>
 </div>

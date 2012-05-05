@@ -25,10 +25,10 @@
 
 			<div class='span4 well'>
 				<?php 
-					$msg = $this->session->flashdata('item');
+					$msg = $this->session->flashdata('log_err');
 					if(!empty($msg)){
 						?>
-						<div class="alert alert-success">
+						<div class="alert alert-error">
 							<?php echo  $msg; ?>
 						</div>
 				<?php	}
@@ -48,7 +48,7 @@
 						<input type='password' name='password_log' id='password_log' class='span3'>
 					</p>
 					<input type='submit' value='Login' class='btn btn-primary' id='loginBtn'>
-					<a  class='btn btn-success form_links' id='click_signup' href="<?php echo base_url() ?>"> Click here to first sign up.
+					<a  class='btn btn-success form_links' id='click_signup' href="<?php echo base_url() ?>"> Sign up  First.
 					</a> 
 					<?php echo form_close(); ?>
 					

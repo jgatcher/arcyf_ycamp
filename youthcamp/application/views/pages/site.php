@@ -1,14 +1,36 @@
 <?php 
 	$has_registered = $this->session->userdata("has_registered");	
+	//echo "<pre>";
+	//print_r($camper);
+	//echo "<pre>";
 ?>
 	
 	<?php if ($has_registered == 1) {
-		$this->session->sess_destroy(); 
+		//$this->session->sess_destroy(); 
 		?>
 		<div class="alert alert-success">
 			<p>
 				You can now make payments<br/> Thanks for registering for Youth Camp 2012. Can't wait to see you there. Till then, keep your fire burning.
 			</p>
+		</div>
+		<div class='span6'>
+			<table class='table table-bordered table-striped'>
+		    <thead>
+			    <tr>
+			    	<th> </th>
+				    <th> </th>
+			    </tr>
+		    </thead>
+		    <tbody>
+		    	<?php foreach ($camper[0] as $key => $value) {
+		    		echo "<tr>";
+		    		echo "<td> $key</td>";
+		    		echo "<td> $value</td>";
+		    		echo "</tr>";
+		    	} ?>
+		    </tbody>
+
+			</table>
 		</div>
 	<?php }
 	else{

@@ -21,6 +21,7 @@
 
 			$page = "site";
 			$data["title"] = $page;
+			$data["camper"] = $val;
 			$data["main_content"]  = 'pages/'.$page;
 			$this->load->view('templates/template',$data);
 		}

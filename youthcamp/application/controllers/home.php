@@ -18,33 +18,42 @@
 			$email_log = $this->input->post("email_log");
 			$password = $this->input->post("password_log");
 
-			$val = $this->mongo_db->where(array(
-				"email" => $email_log,
-				"password" => md5($password)
+			if(empty($password) || empty($email_log)){
+				$reponse = "Please supply both email and password.";
+				$this->session->set_flashdata('log_err', $reponse);
+				redirect('home/view_login');
+			}
+			else {
+
+				$val = $this->mongo_db->where(array(
+					"email" => $email_log,
+					"password" => md5($password)
 				))->get("campers");
 
-			
-			if(!empty($val)){
-				$has_registered = empty($val[0]["has_registered"]) ? 0 : $val[0]["has_registered"];  
-				$data = array(
-					"email_log" =>$val[0]["email"],
-					"is_user_logged_in" => true,
-					'has_registered' => $has_registered,
-					'id' => $val[0]["_id"] 
-				);
-				
-				
-				$this->session->set_userdata($data);
-				if($has_registered){
-					redirect('site/');
-				}else {
-					redirect('registeration/');	
+				if(!empty($val)){
+					$has_registered = empty($val[0]["has_registered"]) ? 0 : $val[0]["has_registered"];  
+					$data = array(
+						"email_log" =>$val[0]["email"],
+						"is_user_logged_in" => true,
+						'has_registered' => $has_registered,
+						'id' => $val[0]["_id"] 
+					);
+					
+					
+					$this->session->set_userdata($data);
+					if($has_registered){
+						redirect('site/');
+					}else {
+						redirect('registeration/');	
+					}
+					
 				}
-				
-			}else {
-				$this->view_login();
+				else {
+					$reponse = "There is no camper with the credentials you entered. If youy haven't signed up please do so.";
+					$this->session->set_flashdata('log_err', $reponse);
+					redirect('home/view_login');
+				}
 			}
-			
 		}		
 		
 		public function view_login(){
@@ -73,8 +82,8 @@
 
 				//check to see if a camper with the same credentials already exist
 				$val = $this->mongo_db->where(array(
-					"email" => $data["email"],
-					"password" => $data["password"]
+					"email" => $data["email"]
+					//"password" => $data["password"]
 					))->get("campers");
 				
 				if(empty($val)){ // no camper found
@@ -93,7 +102,7 @@
 					}
 				}
 				else {
-					$reponse = "There is already a  camper with the same email and password. If you the one, kindly proceed to login.";
+					$reponse = "There is already a  camper with the same email. If you the one, kindly proceed to login.";
 					$this->session->set_flashdata('err', $reponse);
 					redirect('home/view');
 				}

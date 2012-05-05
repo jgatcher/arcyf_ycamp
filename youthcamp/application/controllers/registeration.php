@@ -68,9 +68,9 @@
 				$this->mongo_db->where(
 					array("email"=>$email, "_id"=>new MongoId($id))
 					)->update('campers', $data );
-			} catch (MongoConnectionException $e) {
+			}catch (MongoConnectionException $e) {
 				//print_r($e);
-			} catch (MongoException  $e) {
+			}catch (MongoException  $e) {
 				//print_r($e);
 			}
 
