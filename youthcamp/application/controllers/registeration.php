@@ -7,7 +7,6 @@
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 			//$this->load->library('mongo_db');
-
 			
 			$data["title"] = $page;
 			$data["main_content"]  = 'pages/'.$page;
@@ -26,7 +25,18 @@
 			$type = $occupation["type"] = $data["occupation"];
 			
 			if($type=="student"){
-				$occupation["school"] = $data["school"];
+				if($data["school"]=="other"){
+					$occupation["school"] = $data["other_school"];
+					unset($data["other_school"]);
+
+					//do the same for location
+					
+				}else {
+					$occupation["school"] = $data["school"];	
+				}
+				
+
+				//check for other_school
 				$occupation["school_location"] = $data["school_location"];
 				$occupation["educationalLevel"] = $data["educationalLevel"];
 			}

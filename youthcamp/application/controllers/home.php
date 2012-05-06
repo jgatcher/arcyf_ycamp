@@ -11,7 +11,7 @@
 		}
 
 		public function login(){
-			//connect to db and fecth record
+			//connect to db and fetch record
 			//do some validation
 			$this->load->library('mongo_db');
 			$valid = false;

@@ -15,10 +15,15 @@
 			$campers_registered = $this->mongo_db->where(array(
 				"has_registered" => true
 			))->get("campers");
-			//echo $num_campers_registered;
+
+			$campers_signedup = $this->mongo_db->where(array(
+				"has_registered" => false
+			))->get("campers");
+			
 			$campers = array();
 			$campers["num_campers_signedup"] = $num_campers_signedup;
 			$campers["num_campers_registered"] = $num_campers_registered;
+			$campers["campers_signedup"] = $campers_signedup;
 			$campers["campers_registered"] = $campers_registered;
 
 			$this->view("index", $campers);

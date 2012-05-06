@@ -5,7 +5,7 @@
 		
 		<tbody>
 			<tr>
-				<td>Number of Camper Registered</td>
+				<td>Number of Campers Registered</td>
 				<td><?php echo $num_campers_registered;  ?> </td>
 			</tr>
 			<tr>
@@ -33,7 +33,7 @@
 				foreach ($campers as $camper) {
 					?>
 					<tr>
-						<td><?php echo $camper["lastName"] . " ".  $camper["firstName"] ;?> </td>
+						<td><?php echo $camper["firstName"]  . " ". $camper["lastName"] ;?> </td>
 						<td> <?php echo $camper["phoneNumber"]; ?></td>
 						<td> <?php echo $camper["registrationCode"]; ?> </td>
 					</tr>	
@@ -42,7 +42,30 @@
 			?>
 			
 		</tbody>
-		
+	</table>
+
+	<br />
+	<h3>Signed Campers </h3>
+	<table class='table table-bordered table-striped'>
+		<thead>
+			    <tr>
+			    	<th>Email</th>
+				    <th>Date Signed Up</th>
+				</tr>
+		    </thead>
+		<tbody>
+			<?php 
+				foreach ($campers_signedup as $camper) {
+					?>
+					<tr>
+						<td><?php echo $camper["email"]  ;?> </td>
+						<td> <?php echo $camper["date_signed_up"]; ?></td>
+					</tr>	
+					<?php
+				} 
+			?>
+			
+		</tbody>
 	</table>
 
 </div>
