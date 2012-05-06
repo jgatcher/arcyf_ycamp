@@ -89,12 +89,16 @@
 				if(empty($val)){ // no camper found
 					$data["has_registered"] = false;
 					$data["date_signed_up"]  = date("Y-m-d h:i:s");
-					$data["dateOfBirth"]  = $data["year"]."-". $data["month"] .'-' . $data["day"];
+					$confirmation_key = md5(date("Y-m-d H:i:s"));
+					$data["confirmationKey"] = $confirmation_key;
+					
 					try {
 						$id = $this->mongo_db->insert('campers', $data );
 						$str = "Successfully signed Up! <b>Please login to start the registration process </b> .";
 						$this->session->set_flashdata('item', $str);
+						//$this->send_signup_mail("selasiehansontest@gmail.com",$data["email"],"this is a test");
 						redirect('home/view_login');
+						//redirect('home/view');
 					}catch (MongoConnectionException $e) {
 						//todo : add error messages
 						redirect('home/view');
@@ -108,6 +112,18 @@
 					redirect('home/view');
 				}
 			}
+		}
+
+		private function send_signup_mail($from,$to, $message){
+
+			$this->load->library('email');
+			$this->email->from($from, "Youth Camp 2012");
+			$this->email->to($to); 
+			$this->email->subject('Confirm Sign Up');
+			$this->email->message($message);	
+			$this->email->send();
+
+			//echo $this->email->print_debugger();
 		}
 
 		public function logout () {

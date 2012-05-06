@@ -10,13 +10,15 @@
 		</ol>
 	</div>
 		<?php  
-			
+
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
 		
 		<div class="row" >
 			<div class='span4 well'>
 				<?php 
+				 
+				
 					$error = $this->session->flashdata('err');
 					if(!empty($error)){
 						?>

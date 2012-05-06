@@ -1,6 +1,6 @@
 <div class='custom'>
 	<div class='row'>
-		<div class="span6">
+		<div class="">
 			<table class='table table-bordered table-striped'>
 		    <thead>
 			    <tr>

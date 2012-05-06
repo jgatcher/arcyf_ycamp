@@ -40,7 +40,8 @@
 
 //$route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['registeration/register_camper'] = 'registeration/register_camper';
+$route['registeration/confirm_signup'] = 'registeration/confirm_signup';
+$route["camper/(:any)"] = 'camper/index/$1';
 $route['registeration'] = 'registeration/view';
 $route['default_controller'] = 'home/view';
 $route['home'] = 'home/view/';

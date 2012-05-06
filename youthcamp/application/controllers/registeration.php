@@ -2,13 +2,13 @@
 	class Registeration extends  CI_Controller {
 
 		//private $mdb =  
-		public function view()
+		public function view($page = "register")
 		{
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 			//$this->load->library('mongo_db');
 
-			$page = "register";
+			
 			$data["title"] = $page;
 			$data["main_content"]  = 'pages/'.$page;
 			$this->load->view('templates/template',$data);
@@ -64,6 +64,11 @@
 			
 			$data["dateOfBirth"]  = $data["year"]."-". $data["month"] .'-' . $data["day"];
 
+			//generate a unique code
+			$fname = $data["firstName"];
+			$lname = $data["lastName"];
+			$data["registrationCode"]  = $this->generate_code($fname, $lname);
+
 			try{
 				$data["has_registered"] = true;
 				$data["date_registered"]  = date("Y-m-d h:i:s");
@@ -78,5 +83,17 @@
 
 			redirect('site/');
 		}
+
+		public function  confirm_signup($key){
+			//$this->view("conf_signup");
+		}
+
+		private function generate_code($fname, $lname){
+			$date = date("Y-m-d H:i:s");
+			$short = md5($date);
+			return $fname[0] . $lname[0]. strtoupper(substr($short,0,6));	
+		}
+
+		
 	}
  ?>
