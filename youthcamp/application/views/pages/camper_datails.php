@@ -11,6 +11,7 @@
     <link href="<?php echo base_url(); ?>/assets/css/datepicker.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet">
 	<title><?php echo $title ?> </title>
+
 </head>
 <body>
 	  <div class="container">
@@ -27,7 +28,10 @@
 	<div class='row'>
 		<div class='span9'>
 
-			<div></div>
+			<div>
+				<h1>Youth Camp 2012 Registration Details</h1>
+			</div>
+			<br />
 			<div id='camper_records'>
 				<table class='table table-bordered table-striped'>
 			    	<tbody>
@@ -66,5 +70,10 @@
 	</div>
 	 
 </div>
+<script type="text/javascript">
+	window.onload =  function (){
+		//window.print();
+	}
+</script>
 </body>
 </html>
