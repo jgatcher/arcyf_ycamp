@@ -158,189 +158,72 @@
 					<div class="control-group">
 						<label>School  </label>
 						<p>
-<<<<<<< HEAD
-							<select name='school' id='school'>
-<option>University of Ghana</option>
-<option>Pentecost University</option>
-<option>Ashesi University</option>
-<option>Methodist University</option>
-<option>Central University</option>
-<option>Cape Coast University</option>
-<option>Kwame Nkrimah University of Science and Technology</option>
-<option>Aburi Girls Senior High</option>
-<option>Accra Girls Senior High
-</option>
-<option>Achimota Senior High
-</option>
-<option>Akosombo International
-</option>
-<option>All Saints' Anglican Model Basic School
-</option>
-<option>Alsyd Academy
-</option>
-<option>Archboshop Porter Girls Senior High
-</option>
-<option>Audausudai Junior High School
-</option>
-<option>Bask Academy
-</option>
-<option>Bishop Bowers School
-</option>
-<option>Bishop Girl's School
-</option>
-<option>Christ The King International School
-</option>
-<option>Corpus Christi Catholic Basic School
-</option>
-<option>East Airport International
-</option>
-<option>Emit Electronic Institute
-</option>
-<option>Faith Montessori
-</option>
-<option>Fountainhead Christian School
-</option>
-<option>Franklin & Marshall College
-</option>
-<option>Ghana Christian High
-</option>
-<option>Holy Child Senior High
-</option>
-<option>Ideal College
-</option>
-<option>Independence Avenue 1 Primary School
-</option>
-<option>Jack And Jill
-</option>
-<option>Krobo Girls Senior High
-</option>
-<option>Kumasi Girls' Senior High
-</option>
-<option>Lincoln High School
-</option>
-<option>Mary Mother Of Good Counsel
-</option>
-<option>Mawuli Senoir High
-</option>
-<option>Mfantsiman Girls Senior High
-</option>
-<option>Mfantsipim Senior High
-</option>
-<option>Mizpah International School
-</option>
-<option>Morning Glory Montessori
-</option>
-<option>Morning Star
-</option>
-<option>New Nation School
-</option>
-<option>North Ridge Lyceum
-</option>
-<option>Osu Presby Junior High School
-</option>
-<option>Pope John Senior High
-</option>
-<option>Presbyteriab Boys Senior High
-</option>
-<option>Presby Senior High [Osu]
-</option>
-<option>Queens International School
-</option>
-<option>Ridge Church School
-</option>
-<option>SOS-HGIC
-</option>
-<option>Soul Clinic Int. School
-</option>
-<option>St. Augustine's Senior High
-</option>
-<option>St. John's Grammar
-</option>
-<option>St. Mary's Senior High
-</option>
-<option>St. Roses Senior High
-</option>
-<option>St. Theresa's School
-</option>
-<option>St. Thomas Aquinas Senior High
-</option>
-<option>Tema International School
-</option>
-<option>University Of Ghana Basic School
-</option>
-<option>Wesley Girls' Senior High
-</option>
-<option>Winneba Senior High
-</option>
-<option>Word Of Faith Christian School
-</option>
-							</select>
-						</p>
-=======
-<select name='school' id='school'>
-<option value="Aburi Girls Senior High">Aburi Girls Senior High</option>
-<option value="Accra Girls Senior High">Accra Girls Senior High</option>
-<option value="Achimota Senior High">Achimota Senior High</option>
-<option value="Akosombo International">Akosombo International</option>
-<option value="Alsyd Academy">Alsyd Academy</option>
-<option value="Archbishop Porter Girls Senior High">Archbishop Porter Girls Senior High</option>
-<option value="Ashesi University">Ashesi University</option>
-<option value="Audausudai Junior High School">Audausudai Junior High School</option>
-<option value="Bask Academy">Bask Academy</option>
-<option value="Bishop Bowers School">Bishop Bowers School</option>
-<option value="Bishop Girl's School">Bishop Girl's School</option>
-<option value="Cape Coast University">Cape Coast University</option>
-<option value="Central University">Central University</option>
-<option value="Christ The King International School">Christ The King International School</option>
-<option value="Corpus Christi Catholic Basic School">Corpus Christi Catholic Basic School</option>
-<option value="East Airport International">East Airport International</option>
-<option value="Emit Electronic Institute">Emit Electronic Institute</option>
-<option value="Faith Montessori">Faith Montessori</option>
-<option value="Fountainhead Christian School">Fountainhead Christian School</option>
-<option value="Franklin & Marshall College">Franklin & Marshall College</option>
-<option value="Ghana Christian High">Ghana Christian High</option>
-<option value="Holy Child Senior High">Holy Child Senior High</option>
-<option value="Ideal College">Ideal College</option>
-<option value="Jack And Jill">Jack And Jill</option>
-<option value="Krobo Girls Senior High">Krobo Girls Senior High</option>
-<option value="Kumasi Girls' Senior High">Kumasi Girls' Senior High</option>
-<option value="Kwame Nkrumah University of Science and Technology">Kwame Nkrumah University of Science and Technology</option>
-<option value="Lincoln High School">Lincoln High School</option>
-<option value="Mary Mother Of Good Counsel">Mary Mother Of Good Counsel</option>
-<option value="Mawuli Senoir High">Mawuli Senoir High</option>
-<option value="Methodist University">Methodist University</option>
-<option value="Mfantsiman Girls Senior High">Mfantsiman Girls Senior High</option>
-<option value="Mfantsipim Senior High">Mfantsipim Senior High</option>
-<option value="Mizpah International School">Mizpah International School</option>
-<option value="Morning Glory Montessori">Morning Glory Montessori</option>
-<option value="Morning Star">Morning Star</option>
-<option value="New Nation School">New Nation School</option>
-<option value="North Ridge Lyceum">North Ridge Lyceum</option>
-<option value="Osu Presby Junior High School">Osu Presby Junior High School</option>
-<option value="Pentecost University">Pentecost University</option>
-<option value="Pope John Senior High">Pope John Senior High</option>
-<option value="Presbyterian Boys Senior High">Presbyterian Boys Senior High</option>
-<option value="Presbyterian Senior High [Osu]">Presbyterian Senior High [Osu]</option>
-<option value="Queens International School">Queens International School</option>
-<option value="Ridge Church School">Ridge Church School</option>
-<option value="SOS-HGIC">SOS-HGIC</option>
-<option value="Soul Clinic International">Soul Clinic International</option>
-<option value="St. Augustine's Senior High">St. Augustine's Senior High</option>
-<option value="St. John's Grammar">St. John's Grammar</option>
-<option value="St. Mary's Senior High">St. Mary's Senior High</option>
-<option value="St. Roses Senior High">St. Roses Senior High</option>
-<option value="St. Theresa's School">St. Theresa's School</option>
-<option value="St. Thomas Aquinas Senior High">St. Thomas Aquinas Senior High</option>
-<option value="Tema International School">Tema International School</option>
-<option value="University of Ghana">University of Ghana</option>
-<option value="University Of Ghana Basic School">University Of Ghana Basic School</option>
-<option value="Wesley Girls' Senior High">Wesley Girls' Senior High</option>
-<option value="Winneba Senior High">Winneba Senior High</option>
-<option value="Word Of Faith Christian School">Word Of Faith Christian School</option>
-<option value="Other">Other</option>
 
-							</select>				</p>
->>>>>>> fda867866d5dbd0d66fe99841a4b55b127125045
+							<select name='school' id='school'>
+								<option value="Aburi Girls Senior High">Aburi Girls Senior High</option>
+								<option value="Accra Girls Senior High">Accra Girls Senior High</option>
+								<option value="Achimota Senior High">Achimota Senior High</option>
+								<option value="Akosombo International">Akosombo International</option>
+								<option value="Alsyd Academy">Alsyd Academy</option>
+								<option value="Archbishop Porter Girls Senior High">Archbishop Porter Girls Senior High</option>
+								<option value="Ashesi University">Ashesi University</option>
+								<option value="Audausudai Junior High School">Audausudai Junior High School</option>
+								<option value="Bask Academy">Bask Academy</option>
+								<option value="Bishop Bowers School">Bishop Bowers School</option>
+								<option value="Bishop Girl's School">Bishop Girl's School</option>
+								<option value="Cape Coast University">Cape Coast University</option>
+								<option value="Central University">Central University</option>
+								<option value="Christ The King International School">Christ The King International School</option>
+								<option value="Corpus Christi Catholic Basic School">Corpus Christi Catholic Basic School</option>
+								<option value="East Airport International">East Airport International</option>
+								<option value="Emit Electronic Institute">Emit Electronic Institute</option>
+								<option value="Faith Montessori">Faith Montessori</option>
+								<option value="Fountainhead Christian School">Fountainhead Christian School</option>
+								<option value="Franklin & Marshall College">Franklin & Marshall College</option>
+								<option value="Ghana Christian High">Ghana Christian High</option>
+								<option value="Holy Child Senior High">Holy Child Senior High</option>
+								<option value="Ideal College">Ideal College</option>
+								<option value="Jack And Jill">Jack And Jill</option>
+								<option value="Krobo Girls Senior High">Krobo Girls Senior High</option>
+								<option value="Kumasi Girls' Senior High">Kumasi Girls' Senior High</option>
+								<option value="Kwame Nkrumah University of Science and Technology">Kwame Nkrumah University of Science and Technology</option>
+								<option value="Lincoln High School">Lincoln High School</option>
+								<option value="Mary Mother Of Good Counsel">Mary Mother Of Good Counsel</option>
+								<option value="Mawuli Senoir High">Mawuli Senoir High</option>
+								<option value="Methodist University">Methodist University</option>
+								<option value="Mfantsiman Girls Senior High">Mfantsiman Girls Senior High</option>
+								<option value="Mfantsipim Senior High">Mfantsipim Senior High</option>
+								<option value="Mizpah International School">Mizpah International School</option>
+								<option value="Morning Glory Montessori">Morning Glory Montessori</option>
+								<option value="Morning Star">Morning Star</option>
+								<option value="New Nation School">New Nation School</option>
+								<option value="North Ridge Lyceum">North Ridge Lyceum</option>
+								<option value="Osu Presby Junior High School">Osu Presby Junior High School</option>
+								<option value="Pentecost University">Pentecost University</option>
+								<option value="Pope John Senior High">Pope John Senior High</option>
+								<option value="Presbyterian Boys Senior High">Presbyterian Boys Senior High</option>
+								<option value="Presbyterian Senior High [Osu]">Presbyterian Senior High [Osu]</option>
+								<option value="Queens International School">Queens International School</option>
+								<option value="Ridge Church School">Ridge Church School</option>
+								<option value="SOS-HGIC">SOS-HGIC</option>
+								<option value="Soul Clinic International">Soul Clinic International</option>
+								<option value="St. Augustine's Senior High">St. Augustine's Senior High</option>
+								<option value="St. John's Grammar">St. John's Grammar</option>
+								<option value="St. Mary's Senior High">St. Mary's Senior High</option>
+								<option value="St. Roses Senior High">St. Roses Senior High</option>
+								<option value="St. Theresa's School">St. Theresa's School</option>
+								<option value="St. Thomas Aquinas Senior High">St. Thomas Aquinas Senior High</option>
+								<option value="Tema International School">Tema International School</option>
+								<option value="University of Ghana">University of Ghana</option>
+								<option value="University Of Ghana Basic School">University Of Ghana Basic School</option>
+								<option value="Wesley Girls' Senior High">Wesley Girls' Senior High</option>
+								<option value="Winneba Senior High">Winneba Senior High</option>
+								<option value="Word Of Faith Christian School">Word Of Faith Christian School</option>
+								<option value="Other">Other</option>
+
+							</select>				
+						</p>
+
 					</div>
 
 					<div class="control-group">
