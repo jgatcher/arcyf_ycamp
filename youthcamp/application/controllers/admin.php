@@ -31,7 +31,6 @@
 
 		public function view ($page = "admin", $extra = array()) {
 			
-			
 			$data["title"] = $page;
 			$data["page"] =  $page;
 			$data["main_content"]  = 'admin/'.$page;
