@@ -159,7 +159,6 @@
 						<label>School  </label>
 						<p>
 <select name='school' id='school'>
-<option value="Other">Other</option>
 <option value="Aburi Girls Senior High">Aburi Girls Senior High</option>
 <option value="Accra Girls Senior High">Accra Girls Senior High</option>
 <option value="Achimota Senior High">Achimota Senior High</option>
@@ -219,6 +218,8 @@
 <option value="Wesley Girls' Senior High">Wesley Girls' Senior High</option>
 <option value="Winneba Senior High">Winneba Senior High</option>
 <option value="Word Of Faith Christian School">Word Of Faith Christian School</option>
+<option value="Other">Other</option>
+
 							</select>				</p>
 					</div>
 					<div class="control-group">
