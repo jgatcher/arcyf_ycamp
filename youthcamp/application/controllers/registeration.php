@@ -81,10 +81,10 @@
 
 			try{
 				$data["has_registered"] = true;
-				$data["date_registered"]  = date("Y-m-d h:i:s");
+				$data["date_registered"]  = date("Y-m-d H:i:s");
 				$this->mongo_db->where(
 					array("email"=>$email, "_id"=>new MongoId($id))
-					)->update('campers', $data );
+					)->update('campers', $data);
 			}catch (MongoConnectionException $e) {
 				//print_r($e);
 			}catch (MongoException  $e) {
@@ -102,7 +102,7 @@
 			$date = date("Y-m-d H:i:s");
 			$short = md5($date);
 			$code = $fname[0] . $lname[0].substr($short,0,6);
-			return = strtoupper($code);	
+			return strtoupper($code);	
 		}
 
 		

@@ -72,8 +72,8 @@
 			$this->session->set_userdata(array("is_registering" => true));
 
 			if(empty($data["email"]) || empty($data["password"])) {
-				$reponse = "Please supply both email and password.";
-				$this->session->set_flashdata('err', $reponse);
+				$response = "Please supply both email and password.";
+				$this->session->set_flashdata('err', $response);
 				redirect('home/view');
 			}
 			else //inputs are clean
@@ -88,7 +88,7 @@
 				
 				if(empty($val)){ // no camper found
 					$data["has_registered"] = false;
-					$data["date_signed_up"]  = date("Y-m-d h:i:s");
+					$data["date_signed_up"]  = date("Y-m-d H:i:s");
 					$confirmation_key = md5(date("Y-m-d H:i:s"));
 					$data["confirmationKey"] = $confirmation_key;
 					
