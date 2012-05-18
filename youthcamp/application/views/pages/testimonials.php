@@ -1,4 +1,6 @@
-<div class='  testimonials'>
+<div class="container">
+	<div class='custom'>
+		<div class='  testimonials'>
 			<div class="row">
 
 				<div class="test span3 polaroid pull-left">
@@ -33,4 +35,6 @@
 					consequat. 
 				</div>
 			</div>
+	</div>
+
 </div>

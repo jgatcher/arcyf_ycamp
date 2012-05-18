@@ -1,16 +1,18 @@
-<div class='custom'>
+
 	<?php 
 		$is_registering =  $this->session->userdata("is_registering");
 		if($is_registering){
 			?>
-			<div class='instructions'>
-				<h2>Register for Youth Camp in just 3 simple steps.</h2>
-				<h3>Step 2. Login with the details you just created.</h3>
-				<ol>
-				  <li class="step1 ">1</li>
-				  <li class="step2 selected">2</li>
-				  <li class="step3">3</li>
-				</ol>
+			<div class='custom'>
+				<div class='instructions'>
+					<h2>Register for Youth Camp in just 3 simple steps.</h2>
+					<h3>Step 2. Login with the details you just created.</h3>
+					<ol>
+					  <li class="step1 ">1</li>
+					  <li class="step2 selected">2</li>
+					  <li class="step3">3</li>
+					</ol>
+				</div>
 			</div>
 		<?php
 		}
@@ -21,8 +23,8 @@
 		?>
 		
 
-	<div class="row stuff" >
-
+	<div class="row hero-unit stuff" >
+		<div class='custom'>
 			<div class='span4 well'>
 				<?php 
 					$msg = $this->session->flashdata('log_err');
@@ -51,7 +53,7 @@
 					<a  class='btn btn-success form_links' id='click_signup' href="<?php echo base_url() ?>"> Sign up  First.
 					</a> 
 					<?php echo form_close(); ?>
-					
+					<br /> <br /> <br /> <br /> 
 				</div>
 			</div>
 			<div class="span5">
@@ -84,8 +86,9 @@
 				</div>
 			</div>
 		</div>
-		<?php include("testimonials.php"); ?>
 	</div>
+	<?php include("testimonials.php"); ?>
+	
 
 
 <script type="text/javascript">
