@@ -36,8 +36,15 @@
 				}
 				
 
+				if($data["school_location"]=="other"){
+					$occupation["school_location"] = $data["other_school_location"];
+					unset($data["other_school_location"]);
+				}else {
+					$occupation["school_location"] = $data["school_location"];
+				}
+
 				//check for other_school
-				$occupation["school_location"] = $data["school_location"];
+				
 				$occupation["educationalLevel"] = $data["educationalLevel"];
 			}
 

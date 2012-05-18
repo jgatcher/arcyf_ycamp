@@ -221,7 +221,7 @@
 								<option value="Wesley Girls' Senior High">Wesley Girls' Senior High</option>
 								<option value="Winneba Senior High">Winneba Senior High</option>
 								<option value="Word Of Faith Christian School">Word Of Faith Christian School</option>
-								<option value="Other">Other</option>
+								<option value="other">Other</option>
 
 							</select>				
 						</p>
