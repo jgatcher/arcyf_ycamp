@@ -23,12 +23,12 @@
 				You can now make payments<br/> Thanks for registering for Youth Camp 2012. Can't wait to see you there. Till then, keep your fire burning.
 			</p>
 		</div>
-		<div class='span10'>
+		<div class='span10 '>
 			<div>
 				<h3>These are the details you submitted. <a class="btn btn-info right" href="#<?php echo $obj["_id"];?>" id='print_details'>Print Details</a></h3>
 				
 			</div>
-			<div id='camper_records' class='camper_records' >
+			<div id='camper_records' class='well' >
 				<table class='table table-bordered table-striped'>
 		    
 		    <tbody>

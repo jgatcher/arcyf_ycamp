@@ -32,7 +32,7 @@
 				<h1>Youth Camp 2012 Registration Details</h1>
 			</div>
 			<br />
-			<div id='camper_records'>
+			<div id='camper_records' class='well'>
 				<table class='table table-bordered table-striped'>
 			    	<tbody>
 			    	<?php 
