@@ -1,6 +1,6 @@
 <div class='custom'>
 	<div class="row ">
-		<div class='bkg'>
+		<div class='well'>
 			<h2>About the Youth Camp</h2>
 			<br />
 			<div>

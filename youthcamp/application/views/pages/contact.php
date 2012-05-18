@@ -1,6 +1,6 @@
 <div class='custom'>
 	<div class='row'>
-		<div class='bkg'>
+		<div class='well'>
 			<h2>Contact Persons</h2>
 			<br />
 			<table class='table table-bordered table-striped'>

@@ -1,4 +1,4 @@
-<div class='custom'>
+<div class='custom well'>
 	<h2>Admin Page</h2>
 
 	<table class='table table-bordered table-striped'>

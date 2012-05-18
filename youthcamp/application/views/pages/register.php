@@ -23,10 +23,10 @@
 		</div>
 	<?php 
 		
-		$attributes = array('class' => 'well span8', 'id'=>'registerForm' );
+		$attributes = array('class' => 'well span8', 'id'=>'registerForm');
 		echo form_open('registeration/register_camper', $attributes);
  	?>
-		<div class="row stuff ">
+		<div class="row">
 	  		<div class="span8"><h2>Register</h2><br /> </div>
 
 	  		<div class="span4">
