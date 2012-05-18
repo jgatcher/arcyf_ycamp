@@ -26,7 +26,7 @@
 		$attributes = array('class' => 'well span8', 'id'=>'registerForm' );
 		echo form_open('registeration/register_camper', $attributes);
  	?>
-		<div class="row">
+		<div class="row stuff ">
 	  		<div class="span8"><h2>Register</h2><br /> </div>
 
 	  		<div class="span4">
@@ -248,10 +248,15 @@
 								<option value='Upper West Region (Wa)'>Upper West Region (Wa)</option>
 								<option value='Volta Region (Ho)'>Volta Region (Ho)</option>
 								<option value='Western Region (Sekondi-Takoradi)'>Western Region (Sekondi-Takoradi)</option>
+								<option value='other'>Other (If Outside Ghana)</option>
 							</select>
 						</p>
 					</div>
-
+					<div class="control-group">
+						<p>
+							<input type='text' name='other_school_location' id='other_school_location' class='hide'>
+						</p>
+					</div>
 					<label>Educational Level </label>
 					<p>
 						<select name='educationalLevel'>
@@ -351,6 +356,19 @@
 				}
 			});
 
+			var otherSchoolLocation = $("#other_school_location");
+			var currentSchoolLocation;
+			$("#school_location").change(function(){
+
+				currentSchoolLocation = $.trim($(this).val()).toLocaleLowerCase();
+				//alert(currentSchoolLocation)
+				if(currentSchoolLocation=="other"){
+					otherSchoolLocation.show();
+				}else{
+					otherSchoolLocation.hide();
+				}
+
+			});
 			
 			function check_occupation(studentVal) {
 				studentVal = $.trim(studentVal);
@@ -426,9 +444,12 @@
 						}
 					}
 
-					if(!validate("school_location")){
-						ErrorMsg("Please provide location for your school");
-						return false;
+					var schoolLocation  = $("#school_location").val();
+					if($.trim(schoolLocation).toLocaleLowerCase()=='other'){
+						if(!validate("other_school_location")){
+							ErrorMsg("Please provide location for your school");
+							return false;
+						}
 					}
 				}
 

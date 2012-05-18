@@ -1,4 +1,3 @@
-
 <div class='custom'>
 	<div class='instructions'>
 		<h2>Register for Youth Camp in just 3 simple steps.</h2>
@@ -14,7 +13,7 @@
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
 		
-		<div class="row" >
+		<div class="row stuff" >
 			<div class='span4 well'>
 				<?php 
 				 
@@ -83,6 +82,8 @@
 			</div>
 			
 		</div>
+		<?php include("testimonials.php"); ?>
+		
 	</div>
 
 

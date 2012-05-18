@@ -1,6 +1,8 @@
 <div class='custom'>
 	<div class='row'>
-		<div class="">
+		<div class='bkg'>
+			<h2>Contact Persons</h2>
+			<br />
 			<table class='table table-bordered table-striped'>
 		    <thead>
 			    <tr>

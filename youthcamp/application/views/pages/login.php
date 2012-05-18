@@ -21,7 +21,7 @@
 		?>
 		
 
-	<div class="row" >
+	<div class="row stuff" >
 
 			<div class='span4 well'>
 				<?php 
@@ -84,6 +84,7 @@
 				</div>
 			</div>
 		</div>
+		<?php include("testimonials.php"); ?>
 	</div>
 
 

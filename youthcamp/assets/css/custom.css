@@ -1,3 +1,31 @@
+body {
+	/*background: url(../images/content-area-bg.png);*/
+	background: url(../images/background.jpg);
+}
+
+.stuff {
+	position: absolute;
+	/*background: url(../images/body-bg.png);*/
+	background : white;
+	/*border : 1px solid #dedede;*/
+	border-left : 0px;
+	border-right : 0px;
+	left: 0px;
+	padding-left:  335px;
+	padding-top: 50px;
+	right: 0px;
+	padding-right: 0px;
+	padding-bottom: 30px;
+
+	/*color: #CCC;*/
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .2) !important;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
+
+}
+
 .custom {
 	width : 920px;
 	margin: 0px auto;
@@ -8,8 +36,13 @@
  	margin-top : -8px !important;
 }
 
-.footer {
- 	text-align : center;
+.footer {text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 200px;
+	margin: 0px auto;
+	color: black;
+ 	display: none;	
 }
 
 .logout{
@@ -72,19 +105,19 @@
 }
 
 .instructions ol li.selected { 
-	background: #DD4B39;
+	background: #F54DBE;
 	border: 0px none currentColor;
 	color: #FFFFFF;
 }
 
 .instructions h2, h3 {
-	color : #DD4B39;
+	color : #F54DBE;
 	margin-bottom : 20px;
 	font-weight : normal;
 }
 
 .instructions  h3 { 
-	color : #0088CC;
+	color : #ffe98b;
 }
 
 .form_links{
@@ -93,4 +126,37 @@
 
 .border{
 	border: 1px solid #999;
+}
+
+
+.testimonials {
+	position: relative;
+	top: 450px;
+	padding-top : 10px;
+}
+
+.test{
+	background : white;
+	padding: 6px;
+	border: 1px solid silver;
+}
+
+.bkg {
+	padding: 30px;
+	background: white;
+}
+
+.polaroid {
+	-webkit-transform: rotate(9deg);
+	-moz-transform: rotate(9deg);
+	transform: rotate(9deg);
+	-webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+	-moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+	box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+}
+
+.pull-left {
+	-webkit-transform: rotate(-9deg);
+	-moz-transform: rotate(-9deg);
+	transform: rotate(-9deg);
 }
