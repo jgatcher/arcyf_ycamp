@@ -4,12 +4,15 @@ body {
 }
 
 .stuff {
+	background-color : #111;
 	border-radius: 3px;
 	background-color: rgba(0, 0, 0, .2) !important;
 	box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
 	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
 	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.6) , 0 0 2px rgba(255,255,255,.2) !important;
 
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; 
+	filter: alpha(opacity=90);*/	
 }
 
 .custom {
@@ -133,6 +136,7 @@ body {
 }
 
 .polaroid {
+	width : 270px;
 	-webkit-transform: rotate(9deg);
 	-moz-transform: rotate(9deg);
 	transform: rotate(9deg);
