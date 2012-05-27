@@ -55,7 +55,7 @@
 							 
 						</div>
 					</div>
-						<div class="span5">
+					<div class="span5">
 						    <div id="myCarousel" class="carousel border">
 							    <!-- Carousel items -->
 							    <div class="carousel-inner">
@@ -83,8 +83,8 @@
 							    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 							</div>
 					</div>
-				</div>
 			</div>
+		</div>
 		<?php include("testimonials.php"); ?>
 		
 

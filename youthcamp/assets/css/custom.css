@@ -137,9 +137,9 @@ body {
 
 .polaroid {
 	width : 270px;
-	-webkit-transform: rotate(9deg);
-	-moz-transform: rotate(9deg);
-	transform: rotate(9deg);
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	transform: rotate(2deg);
 	-webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
 	-moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
 	box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
