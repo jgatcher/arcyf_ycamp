@@ -99,7 +99,7 @@ body {
 	color: #FFFFFF;
 }
 
-.instructions h2, h3 {
+.instructions h2, h3 , .testimonials h2{
 	color : #F54DBE;
 	margin-bottom : 20px;
 	font-weight : normal;
