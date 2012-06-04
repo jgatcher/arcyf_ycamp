@@ -16,7 +16,7 @@
 			$this->load->view('templates/admin_template',$data);
 		}
 
-		public function getData($page=-1, $start=-1, $limit=-1 ,$firstName='', $lastName=''){
+		public function getData($page=-1, $start=-1, $limit=-1 ){
 
 			$this->load->library('mongo_db');
 			
@@ -28,14 +28,7 @@
 				"has_registered" => false
 			))->count("campers");
 
-			
-			//check if we are searching or not
-			if($firstName != "" || $lastName != ""){
-
-			}else {
-				
-			}
-
+			//
 			if($start != -1){
 				$take = $limit;
 				$startFrom = $start;
@@ -94,21 +87,30 @@
 				if( !empty($action) && isset($action) && $action == "search") {
 					$firstName = $myGet["sFirstName"];
 					$lastName = $myGet["sLastName"];
-					$data = $this->getData($page,$start,$limit,$firstName, $lastName);
+					$data = $this->searchCamper($firstName, $lastName);
+					$response = array(
+						"data" =>$data,
+						"total" =>count($data) 
+					);
 				}
 			}else {
 				$data = $this->getData($page,$start,$limit);
+				$response = array(
+					"data" =>$data["campers_registered"], 
+					"total" =>$data['num_campers_registered']  
+				);
 			}
 				
+
 			
-			
-			 
-			
-			$response = array(
-				"data" =>$data["campers_registered"], 
-				"total" =>$data['num_campers_registered']  );
 			echo json_encode($response);
 			exit;
+		}
+
+		public function searchCamper($firstName, $lastName){
+			$this->load->library('mongo_db');
+			$data = $this->mongo_db->like("firstName", $firstName)->like('lastName',$lastName)->get('campers') ;
+			return $data;
 		}
 
 		public function markCamperAsPaid(){
