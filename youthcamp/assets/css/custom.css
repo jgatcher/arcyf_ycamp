@@ -1,6 +1,7 @@
 body {
 	/*background: url(../images/content-area-bg.png);*/
 	background: url(../images/background.jpg);
+	padding-top: 60px !important;
 }
 
 .stuff {
@@ -149,4 +150,22 @@ body {
 	-webkit-transform: rotate(-9deg);
 	-moz-transform: rotate(-9deg);
 	transform: rotate(-9deg);
+}
+
+.faq {
+	font-family: tahoma;
+	font-size : 14px;
+}
+
+.faq li {
+	font-weight : bold;
+}
+
+.faq .question {
+	padding-bottom: 5px;
+}
+
+.faq .answer {
+	margin-bottom : 30px;
+	font-weight : normal;
 }

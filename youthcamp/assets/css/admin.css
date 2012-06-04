@@ -1,0 +1,25 @@
+	
+	#campers_stuff {
+		overflow: hidden
+	}
+	#campers_form{
+		float : right;
+	}
+
+	#campers_grid {
+		float: left;
+	}
+	.logout {
+		float: right;
+		background: 
+		#555;
+		padding: 5px 20px;
+		font-weight: bold;
+		margin-bottom: 40px;
+		color: 
+		#F54DBE;
+	}
+
+	.logout a:hover{
+		color : white;
+	}

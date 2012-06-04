@@ -1,71 +1,55 @@
-<div class='custom well'>
-	<h2>Admin Page</h2>
-
-	<table class='table table-bordered table-striped'>
-		
-		<tbody>
-			<tr>
-				<td>Number of Campers Registered</td>
-				<td><?php echo $num_campers_registered;  ?> </td>
-			</tr>
-			<tr>
-				<td>Number of Campers Signed Up</td>
-				<td><?php echo $num_campers_signedup;  ?> </td>
-			</tr>
-			
-		</tbody>
-		
-	</table>
+<style type="text/css">
 	
-	<br />
-	<h3>Registered Campers</h3>
-	<table class='table table-bordered table-striped'>
-		<thead>
-			    <tr>
-			    	<th>Name  of Camper</th>
-				    <th>Phone Number </th>
-				    <th>Registration Code</th>
-			    </tr>
-		    </thead>
-		<tbody>
-			<?php 
-				$campers = $campers_registered;
-				foreach ($campers as $camper) {
-					?>
-					<tr>
-						<td><?php echo $camper["firstName"]  . " ". $camper["lastName"] ;?> </td>
-						<td> <?php echo $camper["phoneNumber"]; ?></td>
-						<td> <?php echo $camper["registrationCode"]; ?> </td>
-					</tr>	
-					<?php
-				} 
-			?>
-			
-		</tbody>
-	</table>
+	/*#campers_stuff {
+		overflow: hidden
+	}
+	#campers_form{
+		float : right;
+	}
 
-	<br />
-	<h3>Signed Campers </h3>
-	<table class='table table-bordered table-striped'>
-		<thead>
-			    <tr>
-			    	<th>Email</th>
-				    <th>Date Signed Up</th>
-				</tr>
-		    </thead>
-		<tbody>
-			<?php 
-				foreach ($campers_signedup as $camper) {
-					?>
-					<tr>
-						<td><?php echo $camper["email"]  ;?> </td>
-						<td> <?php echo $camper["date_signed_up"]; ?></td>
-					</tr>	
-					<?php
-				} 
-			?>
-			
-		</tbody>
-	</table>
+	#campers_grid {
+		float: left;
+	}
+*/
+	#admin_login {
+		margin-left: 300px;
+		margin-top: 30px;
+	}
+</style>
 
+<div class='custom '>
+	<?php 
+		$msg = $this->session->flashdata('admin_log_err');
+		if(!empty($msg)){
+			?>
+			<div class="alert alert-error">
+				<?php echo  $msg; ?>
+			</div>
+	<?php	} ?>
+				
+	<div id='admin_login'>
+		<h3>Admin Login</h3>
+		<?php //echo "<h3>". md5('slashdot') ."</h3>" ; ?>
+		<?php  
+
+			$attributes_login = array('class' => 'custom', 'id'=>'admin_login_form' );
+		?>
+		<?php echo $this->session->flashdata('error'); ?>
+		
+		<?php echo form_open('admin/login', $attributes_login); ?>
+		<label>Email:</label>
+		<p>
+			<input type='text' name='username_log' id='username_log' class='span3'>
+		</p>
+		
+		<label>Password:</label>
+		<p>
+			<input type='password' name='password_log' id='password_log' class='span3'>
+		</p>
+		<input type='submit' value='Login' class='btn btn-primary' id='loginBtn'>
+		
+		<?php echo form_close(); ?>
+		<br /> <br /> <br /> <br /> 
+	</div>
 </div>
+
