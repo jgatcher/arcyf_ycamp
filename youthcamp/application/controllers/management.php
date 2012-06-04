@@ -55,8 +55,16 @@
 			$campers["num_campers_registered"] = $num_campers_registered;
 			$campers["campers_signedup"] = $campers_signedup;
 			
+			
+
+
+			$campers["campers_registered"] = $this->prepData($campers_registered);
+			return $campers;
+		}
+
+		private function prepData($data){
 			$reg = array();
-			foreach ($campers_registered as $camper ) {
+			foreach ($data as $camper ) {
 				//echo ($camper["firstName"]);
 				$camper["id"] = $camper["_id"]->__toString();
 				if(array_key_exists("payment",$camper)){
@@ -68,12 +76,8 @@
 				$reg[] = $camper;				
 			}
 
-
-			$campers["campers_registered"] = $reg;
-			return $campers;
+			return $reg;
 		}
-
-		
 
 		public function getRegisteredCampersAsJson(){
 			$this->load->helper('url');
@@ -101,8 +105,6 @@
 				);
 			}
 				
-
-			
 			echo json_encode($response);
 			exit;
 		}
@@ -110,7 +112,7 @@
 		public function searchCamper($firstName, $lastName){
 			$this->load->library('mongo_db');
 			$data = $this->mongo_db->like("firstName", $firstName)->like('lastName',$lastName)->get('campers') ;
-			return $data;
+			return $this->prepData( $data);
 		}
 
 		public function markCamperAsPaid(){
