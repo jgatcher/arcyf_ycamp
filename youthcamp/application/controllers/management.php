@@ -121,6 +121,7 @@
 			$myPost = $this->input->post();
 			
 			$id = $myPost["id"];
+			date_default_timezone_set ("Africa/Accra");
 			$update = array(
 					"payment" => array(
 						"status" => $myPost["paymentStatus"],
