@@ -8,7 +8,7 @@
 				<div class="test span3 polaroid pull-left">
 					
 					<div>
-						<img src="<?php echo base_url() ?>/assets/images/abokobi.jpg" width='270' height ='120' />
+						<img src="<?php echo base_url() ?>/assets/images/nanaba.jpg" width='270' height ='120' />
 					</div>
 					<h3>NANABA Dawson Asamoh</h3>
 					Youth camp has been such a blessing to me over the past three years that 
@@ -22,7 +22,7 @@
 				</div>
 				<div class="test span3 polaroid ">
 					<div>
-						<img src="<?php echo base_url() ?>/assets/images/abokobi.jpg" width='270' height ='120' />
+						<img src="<?php echo base_url() ?>/assets/images/tony.jpg" width='270' height ='120' />
 					</div>
 					<h3>Anthony Davor</h3>
 					Youth Camp has played a supportive role in my christian growth since 2006. 
@@ -38,7 +38,7 @@
 				</div>
 				<div class="test span3 polaroid pull-left">
 					<div>
-						<img src="<?php echo base_url() ?>/assets/images/hz.jpg" width='270' height ='120' />
+						<img src="<?php echo base_url() ?>/assets/images/andrew.jpg" width='270' height ='120' />
 					</div>
 					<h3>Andrew Amegatcher</h3>
 					My first Youth Camp in 2004 was a truly horrible experience!!! Yep, not the encouraging words you would 
