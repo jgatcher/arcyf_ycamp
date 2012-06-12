@@ -2,7 +2,8 @@
 	Ext.onReady(function (){
 		var store = Ext.create('Ext.data.Store', {
 		    storeId:'campersStore',
-		    fields:["id",'firstName', 'lastName', 'phoneNumber',"registrationCode","paymentStatus"],
+		    fields:["id",'firstName', 'lastName', 'phoneNumber',"registrationCode","paymentStatus","role", 
+		    'date_registered','arrival_day','church.name'],
 		    autoLoad : true,
 		    proxy: {
 		        type: 'ajax',
@@ -20,14 +21,17 @@
 		    title: 'Registered Campers',
 		    store: Ext.data.StoreManager.lookup('campersStore'),
 		    columns: [
-		        { header: 'First Name',  dataIndex: 'firstName' },
-		        { header: 'Last Name',  dataIndex: 'lastName' },
-		        { header: 'Phone', dataIndex: 'phoneNumber' },
-		        { header : 'Payment Status', dataIndex : 'paymentStatus'},
-		        { header: 'Registration Code', dataIndex: 'registrationCode' }
+		        { header: 'First Name',  dataIndex: 'firstName' ,width : 80},
+		        { header: 'Last Name',  dataIndex: 'lastName' ,width : 80},
+		        { header: 'Phone', dataIndex: 'phoneNumber' ,width : 80},
+		        { header : 'PMT Sts', dataIndex : 'paymentStatus', renderer : paymentRenderer,width : 55},
+		        { header: 'Role', dataIndex: 'role',width : 50 },
+		        { header: 'Reg Date', dataIndex: 'date_registered' },
+		        { header: 'Arrival Day', dataIndex: 'arrival_day',width : 70 },
+		        { header: 'Church', dataIndex: 'church.name' ,width : 55}
 		    ],
 		    height: 400,
-		    width: 520,
+		    width: 599,
 		    
 		    dockedItems: [{
 		        xtype: 'pagingtoolbar',
@@ -93,11 +97,18 @@
             ],
             renderTo : 'campers_search'
 		});
+	
+		function paymentRenderer(val) {
+	        if (Ext.String.trim(val).toLowerCase() == "paid") {
+	            return '<span style="color:green;">' + val + '</span>';
+	        }
+	        return '<span style="color:red;">' + val + '</span>';
+	    }
 
 		var form = Ext.create('Ext.form.Panel', {
-		    title: 'Campers Records',
+		    title: 'Manage Campers Payment',
 		    bodyPadding: 5,
-		    width: 350,
+		    width: 300,
 		    url: 'management/markCamperAsPaid',
 		    layout: 'anchor',
 		    defaults: {
@@ -150,14 +161,34 @@
 		            	
 		            	//var myMask = new Ext.LoadMask(grid, {msg:"Please wait..."});
 						//myMask.show();
+						Ext.MessageBox.show({
+				           msg: 'Saving payment, please wait...',
+				           progressText: 'Saving...',
+				           width:300,
+				           wait:true,
+				           waitConfig: {interval:200},
+				           icon:'ext-mb-download', //custom class in msg-box.html
+				           //animateTarget: 'mb7'
+				       	});
+
 		                form.submit({
 		                    success: function(form, action) {
 		                    	form.reset();
-		                       	Ext.Msg.alert('Success', action.result.msg);
+		                    	Ext.MessageBox.hide();
+		                    	Ext.MessageBox.show({
+		                    		title: 'Success',
+								    msg: action.result.msg,
+								    width: 300,
+								    buttons: Ext.Msg.OK,
+								    icon: Ext.window.MessageBox.INFO
+		                    	});
+		                       	
 		                       	window.grid =  grid;
 		                       	grid.store.load({
 		                       		callback: function(records, operation, success) {
        									grid.view.refresh();
+       									Ext.MessageBox.hide();
+       									//icon: Ext.window.MessageBox.INFO
        									//myMask.hide();
     								}
 		                       	})
@@ -166,6 +197,13 @@
 		                    },
 		                    failure: function(form, action) {
 		                        Ext.Msg.alert('Failed', action.result.msg);
+		                        Ext.MessageBox.show({
+		                    		title: 'Failure',
+								    msg: "Something went wrong please try again",
+								    width: 300,
+								    buttons: Ext.Msg.OK,
+								    icon: Ext.window.MessageBox.ERROR
+		                    	});
 		                    }
 		                });
 		            }

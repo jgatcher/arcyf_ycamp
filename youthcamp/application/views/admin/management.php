@@ -22,21 +22,40 @@
 	</table>
 	
 	<br />
-	
-	<div id='campers_search'>
-		
-	</div>
 
-	<h3>Registered Campers</h3>
-	<div id='campers_stuff'>
-			<div id='campers_grid'>
+<div id="the_rooms">some text</div>
 
+
+	<ul class="nav nav-tabs" id='myTab'>
+	  <li class='active'><a href="#home" data-toggle="tab">Camper Management</a></li>
+	  <li><a href="#profile" data-toggle="tab">Print Outs</a></li>
+	  <li><a href="#rooms" data-toggle="tab">Room Management</a></li>
+	  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+	</ul>
+	 
+	<div class="tab-content">
+	  <div class="tab-pane active" id="home">
+	  		<div id='campers_search'></div>
+
+			<h3>Registered Campers</h3>
+			<div id='campers_stuff'>
+				<div id='campers_grid'></div>
+				<div id='campers_form'></div>
+			</div>
+	  </div>
+		<div class="tab-pane" id="profile">
+		  		
 		</div>
-		<div id='campers_form'>
-			
+	  	<div class="tab-pane" id="rooms">
+	  		
 		</div>
-	
+	  <div class="tab-pane" id="settings">lll</div>
 	</div>
+	<script type="text/javascript">
+		//$('#home').tab('show')
+	</script>
+	<br>
+	
 	<br />
 	<h3>Signed Campers </h3>
 	<table class='table table-bordered table-striped'>

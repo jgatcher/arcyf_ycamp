@@ -2,7 +2,7 @@
 
 // $config['mongo_host'] = 'localhost';
 // $config['mongo_port'] = 27017;
-// $config['mongo_db'] = 'youthcamp_dev';
+// $config['mongo_db'] = 'youthcamp_live';
 // $config['mongo_user'] = '';
 // $config['mongo_pass'] = '';
 // $config['mongo_persist'] = TRUE;
