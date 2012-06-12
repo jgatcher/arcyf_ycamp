@@ -526,7 +526,7 @@ class Mongo_db
 	 	foreach($documents as $doc):
 	 		$returns[] = $doc;
 	 	endforeach;
-	 	
+	 	$this->clear();
 	 	return($returns);
 
 	 }

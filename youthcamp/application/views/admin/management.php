@@ -1,12 +1,10 @@
 <?php $is_admin_logged_in = $this->session->userdata("is_admin_logged_in");  ?>
 <?php if($is_admin_logged_in){ ?>
+<script src="<?php echo base_url(); ?>/assets/js/management.js"></script>
 <div class='custom well'>
-	<div class="logout">
-		<a href="<?php echo site_url('admin/logout') ?>">Logout</a>
-	</div> 
-	<div class="export">
-		<a href="<?php echo site_url('admin/export') ?>">Export</a>
-	</div> 
+	<?php include ("links.php"); ?>
+	
+	
 	<h2>Admin Page</h2>
 
 	<table class='table table-bordered table-striped'>
@@ -25,21 +23,20 @@
 	</table>
 	
 	<br />
-	
-	<div id='campers_search'>
-		
-	</div>
+
+<!-- <div id="the_rooms">some text</div> -->
+
+	<div id='campers_search'></div>
 
 	<h3>Registered Campers</h3>
 	<div id='campers_stuff'>
-			<div id='campers_grid'>
-
-		</div>
-		<div id='campers_form'>
-			
-		</div>
-	
+		<div id='campers_grid'></div>
+		<div id='campers_form'></div>
 	</div>
+	
+	 
+	<br>
+	
 	<br />
 	<h3>Signed Campers </h3>
 	<table class='table table-bordered table-striped'>
@@ -57,7 +54,6 @@
 						<td><?php echo $camper["email"]  ;?> </td>
 						<td> <?php echo $camper["date_signed_up"]; ?></td>
 					</tr>	
-					
 					<?php
 				} 
 			?>
