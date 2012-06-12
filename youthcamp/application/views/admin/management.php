@@ -4,6 +4,9 @@
 	<div class="logout">
 		<a href="<?php echo site_url('admin/logout') ?>">Logout</a>
 	</div> 
+	<div class="export">
+		<a href="<?php echo site_url('admin/export') ?>">Export</a>
+	</div> 
 	<h2>Admin Page</h2>
 
 	<table class='table table-bordered table-striped'>
@@ -54,6 +57,7 @@
 						<td><?php echo $camper["email"]  ;?> </td>
 						<td> <?php echo $camper["date_signed_up"]; ?></td>
 					</tr>	
+					
 					<?php
 				} 
 			?>
