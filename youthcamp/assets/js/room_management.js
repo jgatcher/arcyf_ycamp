@@ -109,7 +109,46 @@ Ext.onReady(function (){
 	            }
 	        }
 	    }],
-	   // renderTo: 'the_rooms'
+	    //renderTo: 'the_rooms'
 });
+		var store = Ext.create('Ext.data.Store', {
+		    storeId:'roomStore',
+		    fields:[ 'room', 'camper',"roomType"],
+		    autoLoad : true,
+		    pageSize: 50,
+		    proxy: {
+		        type: 'ajax',
+		        api: {
+		        	read : 'management/getRoomsAsJson'
+		        },
+		        reader: {
+		            type: 'json',
+		            root: 'data'
+		        }
+		    }
+		});
 
+		var grid = Ext.create('Ext.grid.Panel', {
+		    title: 'Rooms',
+		    store: Ext.data.StoreManager.lookup('roomStore'),
+		    columns: [
+		        { header: 'Camper',  dataIndex: 'camper' ,flex: 1},
+		        { header: 'Room Name',  dataIndex: 'room' ,flex: 1},
+		        { header: 'Room Type',  dataIndex: 'roomType' ,flex : 1},
+		      
+		        //{ header: '',  dataIndex: '' ,width : 100},
+		    ],
+		    height: 600,
+		    width: 599,
+		    
+		    dockedItems: [{
+		        xtype: 'pagingtoolbar',
+		        store: Ext.data.StoreManager.lookup('roomStore'),   // same store GridPanel is using
+		        dock: 'bottom',
+		        displayInfo: true
+		    }],
+		    renderTo: "rooms_grid"
+		});
+
+		
 });

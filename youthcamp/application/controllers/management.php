@@ -198,8 +198,8 @@
 		public function assignRooms()
 		{
 			$this->load->library('mongo_db');
-			$campers = $this->mongo_db->where(array("gender" =>  "female"))->get("campers");
-			$rooms =  $this->mongo_db->where(array("roomType" => "female"))->get("camp_rooms");
+			$campers = $this->mongo_db->where(array("gender" =>  "male"))->get("campers");
+			$rooms =  $this->mongo_db->where(array("roomType" => "male"))->get("camp_rooms");
 			echo count($campers) . "<br >";
 			echo  count($rooms);
 			$lastIndex = -1;
@@ -255,8 +255,17 @@
 			}	
 		}
 
-		public function getRooms(){
+		public function getRoomsAsJson(){
+			$this->load->library('mongo_db');
+			$rooms =  $this->mongo_db->get("camper_rooms_view");
 			
+			$response = array(
+					"data" =>$rooms, 
+					"total" =>count($rooms)  
+			);
+
+			echo json_encode($response);
+			exit;
 		}
 
 	}

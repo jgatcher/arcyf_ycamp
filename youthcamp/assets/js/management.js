@@ -5,6 +5,7 @@
 		    fields:["id",'firstName', 'lastName', 'phoneNumber',"registrationCode","paymentStatus","role", 
 		    'date_registered','arrival_day','church.name'],
 		    autoLoad : true,
+		    pageSize: 50,
 		    proxy: {
 		        type: 'ajax',
 		        api: {
@@ -30,7 +31,7 @@
 		        { header: 'Arrival Day', dataIndex: 'arrival_day',width : 70 },
 		        { header: 'Church', dataIndex: 'church.name' ,width : 55}
 		    ],
-		    height: 400,
+		    height: 600,
 		    width: 599,
 		    
 		    dockedItems: [{
