@@ -24,6 +24,14 @@
 			<br />
 			<div id='camper_records' >
 				<table class='table table-bordered table-striped'>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Camper</th>
+							<th>Room</th>
+							<th>Room Type</th>
+						</tr>
+					</thead>
 			    	<tbody>
 			    	<?php 
 			    		function cmp($a, $b){
