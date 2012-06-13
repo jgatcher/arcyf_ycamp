@@ -115,11 +115,11 @@ Ext.onReady(function (){
 		    storeId:'roomStore',
 		    fields:[ 'room', 'camper',"roomType"],
 		    autoLoad : true,
-		    pageSize: 50,
+		    pageSize: 250,
 		    proxy: {
 		        type: 'ajax',
 		        api: {
-		        	read : 'management/getRoomsAsJson'
+		        	read : 'rooms/getRoomsAsJson'
 		        },
 		        reader: {
 		            type: 'json',
@@ -150,5 +150,51 @@ Ext.onReady(function (){
 		    renderTo: "rooms_grid"
 		});
 
+		var url = "myprint/print_rooms";
+		$("#printRoomListMale").click(function (){
+			
+			var a = window.open(url + "/male", "print_window", 'height=600,width=720', false);
+			a.focus();
+
+		});
+		$("#printRoomListFemale").click(function (){
+			
+			var a = window.open(url + "/female", "print_window", 'height=600,width=720', false);
+			a.focus();
+
+		});
+
+		$("#processRoomAllocation").click(function (){
+			Ext.MessageBox.show({
+	           msg: 'Processing, please wait...',
+	           progressText: 'Saving...',
+	           width:300,
+	           wait:true,
+	           waitConfig: {interval:200},
+	           icon:'ext-mb-download', //custom class in msg-box.html
+	           //animateTarget: 'mb7'
+	       	});
+
+			$.ajax({
+				url : 'rooms/processRooms',
+				type : 'post',
+				data : {},
+				dataType : 'json',
+				success : function (){
+					Ext.MessageBox.hide();
+						grid.store.load({
+                       		callback: function(records, operation, success) {
+									grid.view.refresh();
+									Ext.MessageBox.hide();
+									//icon: Ext.window.MessageBox.INFO
+									//myMask.hide();
+							}
+                       	})
+				},
+				failure : function (){
+
+				}
+			})
+		});
 		
 });

@@ -35,7 +35,7 @@
 			    	<tbody>
 			    	<?php 
 			    		function cmp($a, $b){
-							return strcmp($a['camper'], $b['camper']);				
+							return strcmp($a['camper'], $b['camper']);		
 						}
 						
 						usort($campers, "cmp");

@@ -24,7 +24,7 @@
 	
 	<br />
 
-<!-- <div id="the_rooms">some text</div> -->
+<div id="the_rooms">some text</div>
 
 	<div id='campers_search'></div>
 
