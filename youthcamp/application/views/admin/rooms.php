@@ -19,20 +19,8 @@
 		//var baseUrl =  "<?php echo base_url(); ?>" ;
 		//var url = baseUrl + "index.php/myprint/print_rooms";
 		//var baseUrl =  "<?php echo base_url(); ?>" ;
-		var url = "myprint/print_rooms";
-		$("#printRoomListMale").click(function (){
-			
-			var a = window.open(url + "/male", "print_window", 'height=600,width=720', false);
-			a.focus();
-
-		});
-		$("#printRoomListFemale").click(function (){
-			
-			var a = window.open(url + "/female", "print_window", 'height=600,width=720', false);
-			a.focus();
-
-		});
-
+		
+		
 	})();
 </script>
 	</script>

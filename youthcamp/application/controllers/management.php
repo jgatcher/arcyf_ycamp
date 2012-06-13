@@ -195,80 +195,8 @@
 			
 		}
 
-		public function assignRooms()
-		{
-			$this->load->library('mongo_db');
-			$campers = $this->mongo_db->where(array("gender" =>  "male"))->get("campers");
-			$rooms =  $this->mongo_db->where(array("roomType" => "male"))->get("camp_rooms");
-			echo count($campers) . "<br >";
-			echo  count($rooms);
-			$lastIndex = -1;
-			$done =  false;
-			
-			foreach ($rooms as $room) {
-				$numberInRoom = count($room["occupants"]);
-				$numExpected = $room["expectedNumber"];
-				$numberToAdd = $numExpected - $numberInRoom;
-				$targetIndex = $numberToAdd + $lastIndex;
-				$ids = array();
-				$recs = array();
-				for( $i = 0; $i < $numberToAdd ; $i++){
-					
-					$lastIndex++;
-					
-					if(isset($campers[$lastIndex])){
-						$c = $campers[$lastIndex];
-						if($c["role"]==="camper" || $c["role"] === "participant" && $c["lastName"] !== "Ayitevie"){
-							echo "<br />";
-							//echo $lastIndex ." is ".$c["firstName"] . " ". $c["lastName"] . " is " . $c["role"];
-							$r = array(
-								"camper" => $c["firstName"] . " ". $c["lastName"],
-								"id" => $c["_id"]->__toString(),
-								"role" => $c["role"]
-							);
-							
-							$recs[] = $r;	
-						}else {
-							//echo "<br />";
-						 	//echo $lastIndex ." is ".$c["firstName"] . " ". $c["lastName"] . " is " . $c["role"];
-						 	$i--;
-						 }
-					}
-						
-					else
-						//$done =true;
-						break;
-				}
+		
 
-				$room["occupants"] = $recs;
-				$roomId = $room["_id"];
-				unset($room["_id"]);
-				//print_r($room);
-				//echo $room["_id"];
-				$this->mongo_db->where(array( "_id"=> new MongoId($roomId) ))
-				->update('camp_rooms', $room);
-				//echo "<pre>";
-				//print_r($recs);
-				//echo "</pre>";
-				//echo $lastIndex;
-				
-			}	
-
-			return true;
-		}
-
-		public function getRoomsAsJson(){
-			$this->load->library('mongo_db');
-			$rooms =  $this->mongo_db->get("camper_rooms_view");
-			
-			$response = array(
-					"data" =>$rooms, 
-					"total" =>count($rooms)  
-			);
-
-			echo json_encode($response);
-			exit;
-		}
-
+		
 	}
  ?>
