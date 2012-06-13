@@ -253,6 +253,8 @@
 				//echo $lastIndex;
 				
 			}	
+
+			return true;
 		}
 
 		public function getRoomsAsJson(){

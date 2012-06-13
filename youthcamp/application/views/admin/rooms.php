@@ -6,8 +6,9 @@
 	
 	<h2>Rooms</h2>
 	<br />
-	<button id='printroomlistfemale' class="btn" href="#">Print Female Room List</button> 
-	<button id='printroomlistmale' class="btn" href="#">Print Male Room List</button>
+	<button id='processRoomAllocation' class="btn" href="#">Process Room Allocation</button> 
+	<button id='printRoomListFemale' class="btn" href="#">Print Female Room List</button> 
+	<button id='printRoomListMale' class="btn" href="#">Print Male Room List</button>
 	<br /> <br />
 	<div id="rooms_grid"></div>
 	
@@ -15,15 +16,17 @@
 	<script type="text/javascript">
 	
 	(function(){
-		var baseUrl =  "<?php echo base_url(); ?>" ;
-		var url = baseUrl + "index.php/myprint/print_rooms";
-		$("#printroomlistmale").click(function (){
+		//var baseUrl =  "<?php echo base_url(); ?>" ;
+		//var url = baseUrl + "index.php/myprint/print_rooms";
+		//var baseUrl =  "<?php echo base_url(); ?>" ;
+		var url = "myprint/print_rooms";
+		$("#printRoomListMale").click(function (){
 			
 			var a = window.open(url + "/male", "print_window", 'height=600,width=720', false);
 			a.focus();
 
 		});
-		$("#printroomlistfemale").click(function (){
+		$("#printRoomListFemale").click(function (){
 			
 			var a = window.open(url + "/female", "print_window", 'height=600,width=720', false);
 			a.focus();

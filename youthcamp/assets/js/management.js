@@ -5,7 +5,7 @@
 		    fields:["id",'firstName', 'lastName', 'phoneNumber',"registrationCode","paymentStatus","role", 
 		    'date_registered','arrival_day','church.name'],
 		    autoLoad : true,
-		    pageSize: 50,
+		    pageSize: 250,
 		    proxy: {
 		        type: 'ajax',
 		        api: {
