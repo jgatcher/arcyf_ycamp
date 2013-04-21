@@ -21,6 +21,10 @@ body {
 	margin: 0px auto;
 }
 
+.hero-unit {
+	padding: 30px !important;
+}
+
 .cust-add-on{
  	margin-left : -4px !important;
  	margin-top : -8px !important;

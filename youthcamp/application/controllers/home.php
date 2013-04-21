@@ -31,6 +31,18 @@
 				))->get("campers");
 
 				if(!empty($val)){
+
+					//check to make sure the person has first confirmed their signup
+
+					$has_confirmed = empty($val[0]["has_confirmed"]) ? 0 : $val[0]["has_confirmed"];  
+
+					if(!$has_confirmed){
+						$message  = "You cannot proceed to register unless you have confirmed through the email that was sent you. ";
+						$message .= "kindly check your email and follow the instructions given";
+						$this->session->set_flashdata('err', $message);
+						redirect("home/view");
+					}
+
 					$has_registered = empty($val[0]["has_registered"]) ? 0 : $val[0]["has_registered"];  
 					$data = array(
 						"email_log" =>$val[0]["email"],
@@ -60,6 +72,48 @@
 			$this->view("login");
 		}
 
+		public function view_confirmsignup ($key=null){
+			if(empty($key)){
+				//set an error message here
+				redirect("home/view");
+			}else {
+				$this->load->library('mongo_db');
+				$val = $this->mongo_db->where(array(
+					"confirmationKey" => $key
+				))->get("campers");
+
+				if(count($val) > 0) { 
+
+					//check if user has already been confirmed
+					if($val[0]["has_confirmed"] == 1) {
+
+						$response = array(
+							"type" => "info",
+							"message" => "You have already been confirmed."
+						);
+						$this->session->set_flashdata('item', $response);	
+					}else {
+						$data = array("has_confirmed" => true);
+						$this->mongo_db->where(
+							array("confirmationKey" => $key)
+							)->update('campers', $data);
+
+						$response = array(
+							"type" => "success",
+							"message" => "You have been successfully confirmed."
+						);
+						$this->session->set_flashdata('item', $response);	
+					}
+
+					
+					$this->view("confirm_signup");	
+				}else {
+					//set error message here
+					redirect ("home/view");
+				}
+				
+			}
+		}
 
 		public function signup(){
 			$this->load->helper('url');
@@ -68,6 +122,8 @@
 			//todo make sure that the email and password do not already exist
 			$data["email"] = $this->input->post("email");
 			$data["password"] =$this->input->post("password");
+			$data["firstName"] = $this->input->post("firstName");
+			$data["lastName"] = $this->input->post("lastName");
 			
 			$this->session->set_userdata(array("is_registering" => true));
 
@@ -88,42 +144,59 @@
 				
 				if(empty($val)){ // no camper found
 					$data["has_registered"] = false;
+					$data["has_confirmed"] = false;
 					$data["date_signed_up"]  = date("Y-m-d H:i:s");
 					$confirmation_key = md5(date("Y-m-d H:i:s"));
-					$data["confirmationKey"] = $confirmation_key;
+
+					//set up a confirmation key which will be sent via email
+					$data["confirmationKey"] = $confirmation_key; 
 					
 					try {
 						$id = $this->mongo_db->insert('campers', $data );
-						$str = "Successfully signed Up! <b>Please login to start the registration process </b> .";
+						$str  = "Thanks for signing up. Instructions have been sent to your email."; 
+						$str .=" Please follow them to enable you to continue with the registration.";
 						$this->session->set_flashdata('item', $str);
-						//$this->send_signup_mail("selasiehansontest@gmail.com",$data["email"],"this is a test");
-						redirect('home/view_login');
+						$this->send_signup_mail($data["email"],$data);
+						//redirect('home/view_login');
 						//redirect('home/view');
 					}catch (MongoConnectionException $e) {
 						//todo : add error messages
-						redirect('home/view');
+						//redirect('home/view');
 					}catch (MongoException  $e) {
-						redirect('home/view');
+						//redirect('home/view');
 					}
+
+					redirect('home/view');
 				}
 				else {
-					$reponse = "There is already a  camper with the same email. If you the one, kindly proceed to login.";
+					$reponse = "There is already a  camper with the same email. If you the one, kindly check your email to confirm and then proceed to login.";
 					$this->session->set_flashdata('err', $reponse);
 					redirect('home/view');
 				}
 			}
 		}
 
-		private function send_signup_mail($from,$to, $message){
-
+		private function send_signup_mail($to_address, $data){
+			$name = $data["firstName"] ." ". $data["lastName"];
+			$key = $data["confirmationKey"];
+			$url = base_url() ."index.php/home/view_confirmsignup/{$key}"; 
+			
+			$message  = "Hello $name, thank you for signing up for Youth Camp 2013. ";
+			$message .= "In order to complete the signup process, please proceed by clicking ";
+			$message .= "on the link below. Failure to do so will mean u cannot continue with the process. \n \n";
+			$message .= "$url";
+			
 			$this->load->library('email');
-			$this->email->from($from, "Youth Camp 2012");
-			$this->email->to($to); 
+			$this->email->from("selasiehansontest@gmail.com", "Youth Camp 2013");
+			$this->email->to($to_address); 
 			$this->email->subject('Confirm Sign Up');
 			$this->email->message($message);	
 			$this->email->send();
-
 			//echo $this->email->print_debugger();
+		}
+
+		public function do_confirm_signup(){
+
 		}
 
 		public function logout () {

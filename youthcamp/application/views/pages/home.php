@@ -22,18 +22,35 @@
 						 
 						
 							$error = $this->session->flashdata('err');
+							$success = $this->session->flashdata('item');
+
 							if(!empty($error)){
 								?>
 								<div class="alert alert-error">
 									<?php echo  $error; ?>
 								</div>
-						<?php	}
-						 ?>
+							<?php	}
+
+							if(!empty($success)){
+								?>
+								<div class="alert alert-success">
+									<?php echo  $success; ?>
+								</div>
+							<?php	} ?>
 
 						<div id='signup_div'>
 							<h2>Sign Up </h2>
 							<?php echo form_open('home/signup', $attributes_signup); ?>
 
+								<label>First Name  </label>
+								<p>
+									<input type='text' name='firstName' id='firstName' class="span3">
+								</p>
+				  				<label>Last Name  </label>
+								<p>
+									<input type='text' name='lastName' id='lastName' class="span3">
+								</p>
+				  			
 								<label>Email:</label>
 								<p>
 									<input type='text' name='email' id='email' class='span3'>
@@ -97,9 +114,23 @@
 		$("#signup_form").submit(function () {
 		    var f =  $(this);
 		    var data = window.data = $(this).serializeArray();	
+		    
+		    var firstName = $.trim(f.find("#firstName").val());
+		    var lastName = $.trim(f.find("#lastName").val());
 		    var pass = f.find("#password").val();
 		    var pass2 = f.find("#confpassword").val();
 		    var email = f.find("#email").val();
+
+		    if(firstName.length === 0){
+		    	alert("A First Name is required");
+		    	return false;
+		    }
+
+		    if(lastName.length === 0){
+		    	alert("A Last Name is required");
+		    	return false;
+		    }
+
 
 		    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if(!filter.test(email)){
