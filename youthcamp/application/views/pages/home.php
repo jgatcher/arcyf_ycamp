@@ -1,16 +1,20 @@
 
+	<div class='custom'>
+		<div class='instructions'>
+			<h2>Register for Youth Camp in just 3 simple steps.</h2>
+			<h3>Step 1. Sign Up</h3>
+			<ol>
+			  <li class="step1 selected">1</li>
+			  <li class="step2">2</li>
+			  <li class="step3">3</li>
+			</ol>
+		</div>
+	</div>
 			<?php  
 
 			$attributes_signup = array('class' => 'custom', 'id'=>'signup_form' );
 		?>
-		<style type="text/css">
-			.close_reg {
-				font-size: 38px;
-				color: black;
-				font-weight : bold;
-				line-height: 145px;
-			}
-		</style>
+		
 		<div class="row hero-unit stuff" >
 			<div class='custom'>
 					<div class='span4 well'>
@@ -18,21 +22,54 @@
 						 
 						
 							$error = $this->session->flashdata('err');
+							$success = $this->session->flashdata('item');
+
 							if(!empty($error)){
 								?>
 								<div class="alert alert-error">
 									<?php echo  $error; ?>
 								</div>
-						<?php	}
-						 ?>
+							<?php	}
+
+							if(!empty($success)){
+								?>
+								<div class="alert alert-success">
+									<?php echo  $success; ?>
+								</div>
+							<?php	} ?>
 
 						<div id='signup_div'>
-							<div class='close_reg'>
-								<span >REGISTERATION</span>
-								<br>
-								<span> CLOSED</span>
-					
-							 </div>
+							<h2>Sign Up </h2>
+							<?php echo form_open('home/signup', $attributes_signup); ?>
+
+								<label>First Name  </label>
+								<p>
+									<input type='text' name='firstName' id='firstName' class="span3">
+								</p>
+				  				<label>Last Name  </label>
+								<p>
+									<input type='text' name='lastName' id='lastName' class="span3">
+								</p>
+				  			
+								<label>Email:</label>
+								<p>
+									<input type='text' name='email' id='email' class='span3'>
+								</p>
+								
+								<label>Password:</label>
+								<p>
+									<input type='password' name='password' id='password' class='span3'>
+								</p>
+								
+								<label>Confirm Password:</label>
+								<p>
+									<input type='password' name='confpassword' id='confpassword' class='span3'>
+								</p>
+								
+								<input type='submit' value='Sign Up' class='btn btn-primary' id='signUpBtn'>
+								<a class='btn btn-success form_links' id='click_login' href="<?php echo base_url() ?>index.php/home/view_login ">Already signed up?</a>
+							<?php echo form_close(); ?>
+							 
 						</div>
 					</div>
 					<div class="span5">
@@ -71,3 +108,48 @@
 
 
 
+<script type="text/javascript">
+	(function(){
+
+		$("#signup_form").submit(function () {
+		    var f =  $(this);
+		    var data = window.data = $(this).serializeArray();	
+		    
+		    var firstName = $.trim(f.find("#firstName").val());
+		    var lastName = $.trim(f.find("#lastName").val());
+		    var pass = f.find("#password").val();
+		    var pass2 = f.find("#confpassword").val();
+		    var email = f.find("#email").val();
+
+		    if(firstName.length === 0){
+		    	alert("A First Name is required");
+		    	return false;
+		    }
+
+		    if(lastName.length === 0){
+		    	alert("A Last Name is required");
+		    	return false;
+		    }
+
+
+		    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(!filter.test(email)){
+            	alert("please enter a valid email");
+                return false;
+            }
+
+		    if(pass.length < 5){
+		        alert("password must be more than 5 characters");
+		        return false;
+		    }
+			
+		    if(pass != pass2){
+		       alert("password don't match");
+		       return false;
+		    }
+		});
+
+		
+
+	})();
+</script>

@@ -1,16 +1,28 @@
 <?php 
 	class Registeration extends  CI_Controller {
 
-		//private $mdb =  
 		public function view($page = "register")
 		{
 			$this->load->helper('form');
 			$this->load->library('form_validation');
-			//$this->load->library('mongo_db');
+			$this->load->library('mongo_db');
 			
-			$data["title"] = $page;
-			$data["main_content"]  = 'pages/'.$page;
-			$this->load->view('templates/template',$data);
+			if( $this->session->userdata("is_user_logged_in") ){
+				$data["title"] = $page;
+
+				$id = $this->session->userdata("id") ;
+				$camper = $this->mongo_db->where(
+					array("_id"=>new MongoId($id))
+					)->get('campers');
+				$data["firstName"] = $camper[0]["firstName"];
+				$data["lastName"] = $camper[0]["lastName"];
+
+				$data["main_content"]  = 'pages/'.$page;
+				$this->load->view('templates/template',$data);
+			}else {
+				redirect('home/view_login');
+			}
+			
 		}
 
 
