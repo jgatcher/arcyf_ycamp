@@ -6,37 +6,32 @@
 			<table class='table table-bordered table-striped'>
 		    <thead>
 			    <tr>
-			    	<th>Role</th>
+			    	<!-- <th>Role</th> -->
 				    <th>Contact Person </th>
 				    <th>Phone Number </th>
 			    </tr>
 		    </thead>
 		    <tbody>
 		    	<tr>
-					<td>Head</td>
-					<td>Babatunde Ampah</td>
-					<td>0264055555</td>
+					<!-- <td>Head</td> -->
+					<td>David Mantey</td>
+					<td>0271522709</td>
 				</tr>
 			   <tr>
-			   		<td>Registration</td>
-					<td>Andrew Amegatcher</td>
-					<td>0267666975</td>
+			   		<!-- <td>Registration</td> -->
+					<td>Nana Achau</td>
+					<td>0570908795</td>
 				</tr>
 				<tr>
-					<td>Registration</td>
-					<td>Anthony Dzixose-Davor</td>
-					<td>0244226692</td>
+					<!-- <td>Registration</td> -->
+					<td>Amy Ankrah</td>
+					<td>0241286010</td>
 				</tr>
 				
 				<tr>
-					<td>Transport</td>
-					<td>Sipho Twum</td>
-					<td>0244233994</td>
-				</tr>
-				<tr>
-					<td>Payments</td>
-					<td>Kwamena Odum </td>
-					<td>0244835721</td>
+					<!-- <td>Transport</td> -->
+					<td>Selasi Bedzrah</td>
+					<td>0285068639</td>
 				</tr>
 		    </tbody>
 	    </table>

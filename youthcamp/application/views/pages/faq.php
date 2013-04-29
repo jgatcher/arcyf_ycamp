@@ -34,24 +34,24 @@
 					<div class='question'>What do I do if I want to attend camp but can’t afford it?</div>
 					<div class='answer'>There is currently no provision for sponsorship. However campers who</div>
 				</li> -->
-				<li>
+				<!-- <li>
 					<div class='question'>Will I still have to pay GHC70 if I don’t make it on Wednesday?</div>
 					<div class='answer'> Campers who will be at camp anytime between Thursday (14th June ) and Saturday (16th June) 
 						will be required to pay a camp fee of GHC50.
 					</div>
-				</li>
+				</li> -->
 				<li>
 					<div class='question'>Can I receive a refund after having made payment?</div>
 					<div class='answer'>Camp fees once paid are not refundable.</div>
 				</li>
-				<li>
+				<!-- <li>
 					<div class='question'>Are there transportation arrangements for campers who will be coming to camp at the weekend?</div>
 					<div class='answer'>There are transportation arrangements for campers who will be coming to camp on Friday evening however 
 						anyone who intends to take advantage of this arrangement is required to register their 
 						interest with <b>Sipho Twum on 0244233994  </b> .
 					</div>
-				</li>
-				<li>
+				</li> -->
+				<!-- <li>
 					<div class='question'>Can I attend camp even if I haven’t made payment?</div>
 					<div class='answer'> Campers who for one reason or other cannot make payments before the deadline are required to inform the 
 						following camp officers <b> Andrew Amegatcher 0267666975,  Anthony Dzixose-Davor 024422669, Kwamena Odum 0244835721</b> 
@@ -59,7 +59,7 @@
 						 <br />
 						 Registrants who fail to make payment arrangements with the listed camp officers will be considered to have redrawn their application.
 					</div>
-				</li>
+				</li> -->
 				<!-- <li>
 					<div class='question'></div>
 					<div class='answer'></div>
