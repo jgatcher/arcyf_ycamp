@@ -23,44 +23,22 @@
 						to Friday and on Sundays at registration desk.
 					</div>
 				</li>
-				<!-- <li>
-					<div class='question'>Are there any discounts for families with multiple members attending camp?</div>
-					<div class='answer'>  
-						Yes, families with 3 or more members attending camp will receive a 15% discount 
-						on the total amount they would have had to pay.
-					</div>
-				</li> -->
-				<!-- <li>
-					<div class='question'>What do I do if I want to attend camp but can’t afford it?</div>
-					<div class='answer'>There is currently no provision for sponsorship. However campers who</div>
-				</li> -->
-				<!-- <li>
-					<div class='question'>Will I still have to pay GHC70 if I don’t make it on Wednesday?</div>
-					<div class='answer'> Campers who will be at camp anytime between Thursday (14th June ) and Saturday (16th June) 
-						will be required to pay a camp fee of GHC50.
-					</div>
-				</li> -->
+
+
+				</li>
 				<li>
 					<div class='question'>Can I receive a refund after having made payment?</div>
 					<div class='answer'>Camp fees once paid are not refundable.</div>
 				</li>
 				<!-- <li>
+
 					<div class='question'>Are there transportation arrangements for campers who will be coming to camp at the weekend?</div>
 					<div class='answer'>There are transportation arrangements for campers who will be coming to camp on Friday evening however 
 						anyone who intends to take advantage of this arrangement is required to register their 
 						interest with <b>Sipho Twum on 0244233994  </b> .
 					</div>
-				</li> -->
-				<!-- <li>
-					<div class='question'>Can I attend camp even if I haven’t made payment?</div>
-					<div class='answer'> Campers who for one reason or other cannot make payments before the deadline are required to inform the 
-						following camp officers <b> Andrew Amegatcher 0267666975,  Anthony Dzixose-Davor 024422669, Kwamena Odum 0244835721</b> 
-						latest by the close of day on the 10th of June 2012. They will however be required to make payments latest by 1st July 2012.
-						 <br />
-						 Registrants who fail to make payment arrangements with the listed camp officers will be considered to have redrawn their application.
-					</div>
-				</li> -->
-				<!-- <li>
+					</li>
+					 <li>
 					<div class='question'></div>
 					<div class='answer'></div>
 				</li> -->
