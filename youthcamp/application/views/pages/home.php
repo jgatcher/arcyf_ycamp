@@ -75,8 +75,10 @@
 						    <div id="myCarousel" class="carousel border">
 							    <!-- Carousel items -->
 							    <div class="carousel-inner">
-							    
-							    	<div class="item">
+							    	<!--// <div class="active item">
+							    	// 	<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
+							    	// </div>-->
+							    	<div class="active item">
 							    		<img src="<?php echo base_url(); ?>/assets/images/abokobi.jpg">
 							    	</div>
 							    	<div class="item">
