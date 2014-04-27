@@ -75,9 +75,7 @@
 						    <div id="myCarousel" class="carousel border">
 							    <!-- Carousel items -->
 							    <div class="carousel-inner">
-							    	<!--// <div class="active item">
-							    	// 	<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
-							    	// </div>-->
+							    	
 							    	<div class="active item">
 							    		<img src="<?php echo base_url(); ?>/assets/images/abokobi.jpg">
 							    	</div>
@@ -90,9 +88,7 @@
 							    	<div class="item">
 							    		<img src="<?php echo base_url(); ?>/assets/images/in_worship_again.jpg">
 							    	</div>
-							    	<div class="item">
-							    		<img src="<?php echo base_url(); ?>/assets/images/last.png">
-							    	</div>
+							    	
 							    </div>
 							    <!-- Carousel nav -->
 							    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
