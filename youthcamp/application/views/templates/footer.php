@@ -1,5 +1,4 @@
-
-<div class="footer"><strong>&copy; 2013</strong></div>
+<div class="footer"><strong>&copy; 2014</strong></div>
  	</div><!-- /container -->
 
   </body>
