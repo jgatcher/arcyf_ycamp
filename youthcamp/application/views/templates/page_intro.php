@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?php echo base_url(); ?>">YOUTH CAMP 2013</a>
+          <a class="brand" href="<?php echo base_url(); ?>">YOUTH CAMP 2014</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class=""><a href="<?php echo base_url(); ?>">Home</a></li>
