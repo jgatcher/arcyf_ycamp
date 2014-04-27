@@ -6,11 +6,11 @@
 			<ol>
 				<li>
 					<div class='question'>How much will it cost to attend camp this year?</div>
-					<div class='answer'>This year’s camp will cost each camper a highly subsidised fee of GHC70.</div>
+					<div class='answer'>This year’s camp will cost each camper a highly subsidised fee of GHC80.</div>
 				</li>
 				<li>
 					<div class='question'>When is the deadline for registration?</div>
-					<div class='answer'>Deadline for registration is 8th June 2013. 
+					<div class='answer'>Deadline for registration is 6th June 2014. 
 						Registration is only complete upon payment and failure to make payment 
 						before the registration deadline will result in a forfeiture of registrant’s place at camp. 
 						To avoid this situation, campers are required to inform registration officers beforehand of 
