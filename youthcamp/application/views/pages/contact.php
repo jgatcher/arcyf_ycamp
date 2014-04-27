@@ -14,25 +14,18 @@
 		    <tbody>
 		    	<tr>
 					<!-- <td>Head</td> -->
-					<td>David Mantey</td>
-					<td>0271522709</td>
+					<td>Kwame Asafu-Adjaye</td>
+					<td>027-755-1351</td>
 				</tr>
 			   <tr>
 			   		<!-- <td>Registration</td> -->
 					<td>Nana Achau</td>
-					<td>0570908795</td>
+					<td>057-090-8795</td>
 				</tr>
-				<tr>
-					<!-- <td>Registration</td> -->
-					<td>Amy Ankrah</td>
-					<td>0241286010</td>
+				<td>Emmanuel Asiedu</td>
+					<td>024-291-9018</td>
 				</tr>
 				
-				<tr>
-					<!-- <td>Transport</td> -->
-					<td>Selasi Bedzrah</td>
-					<td>0285068639</td>
-				</tr>
 		    </tbody>
 	    </table>
 		</div>
