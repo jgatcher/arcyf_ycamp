@@ -1,4 +1,3 @@
-
 	<div class='custom'>
 		<div class='instructions'>
 			<h2>Register for Youth Camp in just 3 simple steps.</h2>
@@ -76,9 +75,9 @@
 						    <div id="myCarousel" class="carousel border">
 							    <!-- Carousel items -->
 							    <div class="carousel-inner">
-							    	<div class="active item">
-							    		<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
-							    	</div>
+							    	<!--// <div class="active item">
+							    	// 	<img src="<?php echo base_url(); ?>/assets/images/youthcamp.png">
+							    	// </div>-->
 							    	<div class="item">
 							    		<img src="<?php echo base_url(); ?>/assets/images/abokobi.jpg">
 							    	</div>
